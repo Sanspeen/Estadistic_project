@@ -1,4 +1,15 @@
 database = [
+  {
+      "gender": "Female",
+      "height": 140,
+      "weight": 120,
+      "age": 47,
+      "timeBackingHouse": 26,
+      "lastSemesterAvg": 4.4,
+      "enrollmentValue": 3168919,
+      "stratum": 3,
+      "isWorking": False
+  },
     {
       "gender": "Female",
       "height": 140,
