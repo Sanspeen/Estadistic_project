@@ -30,8 +30,8 @@ def standardDevitation(randomVariableArray):
          f'por lo tanto nuestra desviacion estandar presenta un valor de: {round(math.sqrt(sumOfDistance/len(randomVariableArray)), 4)}, Sí fuese 0 indicaria que no hay\n' \
          f'ninguna disperción.'
 
-#arrayOfVariable = randomVariableExtractor(database, "lastSemesterAvg")
-arrayOfVariable = [1, 2.45, 4.5, 5]
+arrayOfVariable = randomVariableExtractor(database, "lastSemesterAvg")
+#arrayOfVariable = [1, 2.45, 4.5, 5]
 print(arrayOfVariable)
 
 print(f"\nLa media de la variable es: {half(arrayOfVariable)[0]}.")

@@ -57,8 +57,8 @@ while True:
             try:
                 continue_variables.index(var_1)
                 continue_variables.index(var_2)
-                print('Ambas variables existen...')
+
                 time.sleep(3)
             except:
-                print('Lo siento, pero esa variable o no es continua aleatoria o no existe en nuestra base de datos.')
+                print('Lo siento, pero esa variable o no es continua aleatoria o no existe en nuestra base de datos... Te llevaremos al menú inicial.')
                 time.sleep(3)
