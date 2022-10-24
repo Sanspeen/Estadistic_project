@@ -44,17 +44,3 @@ def is_working_separator(random_variable_array):
             not_working_users.append(i)
 
     return is_working_users, not_working_users
-
-
-"""arrayOfVariable = randomVariableExtractor(database, "lastSemesterAvg")
-#arrayOfVariable = [1, 2.45, 4.5, 5]
-print(arrayOfVariable)
-
-print(f"\nLa media de la variable es: {half(arrayOfVariable)[0]}.")
-print(half(arrayOfVariable)[1])
-
-print(f'\nLa mediana se encuentra en el indice: {medium(arrayOfVariable)[1]} y su valor es: {medium(arrayOfVariable)[0]}.')
-print(medium(arrayOfVariable)[2])
-
-print(f'\nDesviacion estandar: {standardDevitation(arrayOfVariable)[0]}')
-print(standardDevitation(arrayOfVariable)[1])"""

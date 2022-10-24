@@ -2,6 +2,7 @@ import os
 import time
 import sys
 from menu_point_1 import *
+from Data import database
 
 os.system('cls')
 print("██████╗░██████╗░░█████╗░██╗░░░██╗███████╗░█████╗░████████╗░█████╗░  ██████╗░███████╗\n" +
@@ -72,5 +73,6 @@ while True:
                 time.sleep(3)
 
         if chosen_index == 'b':
-            point_b()
-            time.sleep(3)
+            os.system('cls')
+            point_b(database)
+            input('\nPresione <<ENTER>> para volver al menu principal.')
