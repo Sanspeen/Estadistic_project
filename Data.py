@@ -548,5 +548,5 @@ database = [
         "enrollmentValue": 5000000.0,
         "stratum": 2,
         "isWorking": True
-    }
+    },
 ]
