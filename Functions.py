@@ -84,10 +84,3 @@ def generate_frequency_table(data_base, variable_name):
     n = len(random_variable_array)
     data = pd.DataFrame(data, pd.unique(absolute_frequency))
     return data, n
-
-
-print(generate_frequency_table(database, 'isWorking')[0])
-print(f'Total: {generate_frequency_table(database, "isWorking")[1]}')
-
-print(generate_frequency_table(database, 'stratum')[0])
-print(f'Total: {generate_frequency_table(database, "stratum")[1]}')

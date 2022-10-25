@@ -78,4 +78,6 @@ while True:
             input('\nPresione <<ENTER>> para volver al menu principal.')
 
         if chosen_index == 'c':
-            print('Coming soon...')
+            os.system('cls')
+            point_c(database)
+            input('\nPresione <<ENTER>> para volver al menu principal.')

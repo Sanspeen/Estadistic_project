@@ -59,5 +59,12 @@ def point_b(data_base):
           f' que los que no trabajan.')
 
 
-def point_c():
+def point_c(data_base):
+    print('Tabla de frecuencias para Estrato:')
+    print(f'{generate_frequency_table(data_base, "stratum")[0]}\n'
+          f'n: {generate_frequency_table(data_base, "stratum")[1]}')
+
     print('')
+    print('Tabla de frecuencias para TRAB:')
+    print(f'{generate_frequency_table(data_base, "isWorking")[0]}\n'
+          f'n: {generate_frequency_table(data_base, "isWorking")[1]}')
