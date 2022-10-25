@@ -57,7 +57,6 @@ def accumulated_absolute_frequently(absolute_frequency_array):
         for j in absolute_frequency_array:
 
             if(i != j):
-                print("diferente")
                 absolute_frequency_array = list(filter((i).__ne__, absolute_frequency_array))
                 break
             else:
@@ -66,6 +65,12 @@ def accumulated_absolute_frequently(absolute_frequency_array):
         absolute_fr.append(sum)
     return absolute_fr
 
+def convert_to_percentage(array_to_convert):
+    converted = []
+    for i in array_to_convert:
+        converted.append(round(i*100))
+    return converted
+
 
 def generate_frequency_table(data_base, variable_name):
     random_variable_array = random_variable_extractor(data_base, variable_name)
@@ -73,10 +78,16 @@ def generate_frequency_table(data_base, variable_name):
 
     data = {'f': absolute_frequency.value_counts(),
             'F': accumulated_absolute_frequently(random_variable_array),
-            'fr': absolute_frequency.value_counts()/len(absolute_frequency)}
+            'fr': absolute_frequency.value_counts()/len(absolute_frequency),
+            '%': convert_to_percentage(absolute_frequency.value_counts()/len(absolute_frequency))}
 
+    n = len(random_variable_array)
     data = pd.DataFrame(data, pd.unique(absolute_frequency))
-    return data
+    return data, n
 
 
-print(generate_frequency_table(database, 'stratum'))
+print(generate_frequency_table(database, 'isWorking')[0])
+print(f'Total: {generate_frequency_table(database, "isWorking")[1]}')
+
+print(generate_frequency_table(database, 'stratum')[0])
+print(f'Total: {generate_frequency_table(database, "stratum")[1]}')
