@@ -62,8 +62,8 @@ def accumulated_absolute_frequently(absolute_frequency_array):
                 break
             else:
                 sum += 1
-    print(absolute_fr)
 
+        absolute_fr.append(sum)
     return absolute_fr
 
 
