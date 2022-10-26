@@ -546,7 +546,21 @@ database = [
         "timeBackingHouse": 89.21,
         "lastSemesterAvg": 0.67,
         "enrollmentValue": 5000000.0,
-        "stratum": 2,
+        "stratum": 6,
+        "isWorking": False
+    }
+]
+
+"""database = [
+    {
+        "gender": "Female",
+        "height": 186.81,
+        "weight": 64.69,
+        "age": 24,
+        "timeBackingHouse": 89.21,
+        "lastSemesterAvg": 0.67,
+        "enrollmentValue": 5000000.0,
+        "stratum": 6,
         "isWorking": True
     },
     {
@@ -559,5 +573,16 @@ database = [
         "enrollmentValue": 5000000.0,
         "stratum": 6,
         "isWorking": False
+    },
+    {
+        "gender": "Male",
+        "height": 158.39,
+        "weight": 80.11,
+        "age": 22,
+        "timeBackingHouse": 71.5,
+        "lastSemesterAvg": 2.07,
+        "enrollmentValue": 5000000.0,
+        "stratum": 2,
+        "isWorking": False
     }
-]
+]"""

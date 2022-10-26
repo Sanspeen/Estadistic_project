@@ -95,7 +95,6 @@ def filter_by_variable_bool(data_base, name_of_variable):
             filtered_variables_is_working.append(database[i])
 
     for j in range(0, len(data_base)):
-        print(database[j].get(name_of_variable))
         if not database[j].get(name_of_variable):
             filtered_variables_is_not_working.append(database[j])
 
@@ -104,7 +103,10 @@ def filter_by_variable_bool(data_base, name_of_variable):
 
 def filter_by_punctual_value(data_base, name_of_variable, estimated_value):
     filtered_variables = []
+    print(data_base)
     for i in range(0, len(data_base)):
+        print(i)
+        print(database[i][name_of_variable])
         if database[i].get(name_of_variable) == estimated_value:
             filtered_variables.append(database[i])
 

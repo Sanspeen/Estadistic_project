@@ -88,8 +88,12 @@ def point_e():
 
 def point_f():
     filtered_by_is_not_working = filter_by_variable_bool(database, "isWorking")[1]
-    print(filtered_by_is_not_working)
-    filtered_by_stratum = filter_by_punctual_value(filtered_by_is_not_working, "stratum", 6)
+    filtered_by_stratum = []
+    for i in filtered_by_is_not_working:
+        if i.get('stratum') == 6:
+            filtered_by_stratum.append(i)
+
+    print(len(filtered_by_is_not_working))
     if len(filtered_by_stratum) == 0:
         print('No existe ningúna persona de estrato 6 en la base de datos.')
     else:
