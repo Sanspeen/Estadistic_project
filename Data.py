@@ -52,7 +52,7 @@ database = [
         "lastSemesterAvg": 3.33,
         "enrollmentValue": 5000000.0,
         "stratum": 5,
-        "isWorking": False
+        "isWorking": True
     },
     {
         "gender": "Male",
@@ -549,4 +549,15 @@ database = [
         "stratum": 2,
         "isWorking": True
     },
+    {
+        "gender": "Female",
+        "height": 186.81,
+        "weight": 64.69,
+        "age": 24,
+        "timeBackingHouse": 89.21,
+        "lastSemesterAvg": 0.67,
+        "enrollmentValue": 5000000.0,
+        "stratum": 6,
+        "isWorking": False
+    }
 ]

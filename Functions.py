@@ -87,10 +87,25 @@ def generate_frequency_table(data_base, variable_name):
     return data, n
 
 
-def filter_by_variable(data_base, name_of_variable, expected_value):
+def filter_by_variable_bool(data_base, name_of_variable):
+    filtered_variables_is_working = []
+    filtered_variables_is_not_working = []
+    for i in range(0, len(data_base)):
+        if database[i].get(name_of_variable):
+            filtered_variables_is_working.append(database[i])
+
+    for j in range(0, len(data_base)):
+        print(database[j].get(name_of_variable))
+        if not database[j].get(name_of_variable):
+            filtered_variables_is_not_working.append(database[j])
+
+    return filtered_variables_is_working, filtered_variables_is_not_working
+
+
+def filter_by_punctual_value(data_base, name_of_variable, estimated_value):
     filtered_variables = []
     for i in range(0, len(data_base)):
-        if database[i].get(name_of_variable) == expected_value:
+        if database[i].get(name_of_variable) == estimated_value:
             filtered_variables.append(database[i])
 
     return filtered_variables

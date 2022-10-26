@@ -90,3 +90,14 @@ while True:
             point_e()
             input('\nPresione <<ENTER>> para volver al menu principal.')
 
+        if chosen_index == 'f':
+            os.system('cls')
+            point_f()
+            input('\nPresione <<ENTER>> para volver al menu principal.')
+
+        if chosen_index == 'g':
+            os.system('cls')
+            point_g()
+            input('\nPresione <<ENTER>> para volver al menu principal.')
+
+

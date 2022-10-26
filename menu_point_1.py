@@ -72,18 +72,44 @@ def point_c(data_base):
 
 def point_d():
     print(f'La cantidad de personas que trabajan dentro'
-          f' de nuestra base de datos es: {len(filter_by_variable(database, "isWorking", True))}')
+          f' de nuestra base de datos es: {len(filter_by_variable_bool(database, "isWorking"))}')
     print(f'La cantidad de datos totales de nuestra base es n = {len(database)}\n')
     print(f'Entonces tenemos que la probabilidad de que tomando una persona al azar esta trabaje'
-          f' es del: %{probability_of_one(len(filter_by_variable(database, "isWorking", True)), len(database))*100}')
+          f' es del: %{probability_of_one(len(filter_by_variable_bool(database, "isWorking")), len(database))*100}')
 
 
 def point_e():
     print(f'La cantidad de personas que pertenecen al estrato 4'
-          f' de nuestra base de datos es: {len(filter_by_variable(database, "stratum", 4))}')
+          f' de nuestra base de datos es: {len(filter_by_punctual_value(database, "stratum", 4))}')
     print(f'La cantidad de datos totales de nuestra base es n = {len(database)}\n')
     print(f'Entonces tenemos que la probabilidad de que tomando una persona al azar esta pertenezca al estrato 4.'
-          f' es del: %{probability_of_one(len(filter_by_variable(database, "stratum", 4)), len(database)) * 100}')
+          f' es del: %{probability_of_one(len(filter_by_punctual_value(database, "stratum", 4)), len(database)) * 100}')
 
+
+def point_f():
+    filtered_by_is_not_working = filter_by_variable_bool(database, "isWorking")[1]
+    print(filtered_by_is_not_working)
+    filtered_by_stratum = filter_by_punctual_value(filtered_by_is_not_working, "stratum", 6)
+    if len(filtered_by_stratum) == 0:
+        print('No existe ningúna persona de estrato 6 en la base de datos.')
+    else:
+        print(f'La cantidad de personas que no trabajan y que pertenecen al estrato 6'
+              f' de nuestra base de datos son: {len(filtered_by_stratum)}')
+        print(f'La cantidad de datos totales de nuestra base es n = {len(database)}\n')
+        print(f'Entonces tenemos que la probabilidad de que tomando una persona al azar esta no trabaje'
+              f' y que pertenezca al estrato 6.'
+              f' es del: %{probability_of_one(len(filtered_by_stratum), len(database)) * 100}')
+
+
+def point_g():
+    filtered_by_is_working = filter_by_variable_bool(database, "isWorking")
+    filtered_by_stratum = filter_by_punctual_value(filtered_by_is_working, "stratum", 6)
+
+    print(f'La cantidad de personas que trabajan y que pertenecen al estrato 6'
+          f' de nuestra base de datos son: {len(filtered_by_stratum)}')
+    print(f'La cantidad de datos totales de nuestra base es n = {len(database)}\n')
+    print(f'Entonces tenemos que la probabilidad de que tomando una persona al azar esta no trabaje'
+          f' y que pertenezca al estrato 6.'
+          f' es del: %{probability_of_one(len(filtered_by_stratum), len(database)) * 100}')
 
 
