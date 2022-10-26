@@ -68,3 +68,22 @@ def point_c(data_base):
     print('Tabla de frecuencias para TRAB:')
     print(f'{generate_frequency_table(data_base, "isWorking")[0]}\n'
           f'n: {generate_frequency_table(data_base, "isWorking")[1]}')
+
+
+def point_d():
+    print(f'La cantidad de personas que trabajan dentro'
+          f' de nuestra base de datos es: {len(filter_by_variable(database, "isWorking", True))}')
+    print(f'La cantidad de datos totales de nuestra base es n = {len(database)}\n')
+    print(f'Entonces tenemos que la probabilidad de que tomando una persona al azar esta trabaje'
+          f' es del: %{probability_of_one(len(filter_by_variable(database, "isWorking", True)), len(database))*100}')
+
+
+def point_e():
+    print(f'La cantidad de personas que pertenecen al estrato 4'
+          f' de nuestra base de datos es: {len(filter_by_variable(database, "stratum", 4))}')
+    print(f'La cantidad de datos totales de nuestra base es n = {len(database)}\n')
+    print(f'Entonces tenemos que la probabilidad de que tomando una persona al azar esta pertenezca al estrato 4.'
+          f' es del: %{probability_of_one(len(filter_by_variable(database, "stratum", 4)), len(database)) * 100}')
+
+
+

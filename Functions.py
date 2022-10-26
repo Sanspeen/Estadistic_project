@@ -65,6 +65,7 @@ def accumulated_absolute_frequently(absolute_frequency_array):
         absolute_fr.append(sum)
     return absolute_fr
 
+
 def convert_to_percentage(array_to_convert):
     converted = []
     for i in array_to_convert:
@@ -84,3 +85,18 @@ def generate_frequency_table(data_base, variable_name):
     n = len(random_variable_array)
     data = pd.DataFrame(data, pd.unique(absolute_frequency))
     return data, n
+
+
+def filter_by_variable(data_base, name_of_variable, expected_value):
+    filtered_variables = []
+    for i in range(0, len(data_base)):
+        if database[i].get(name_of_variable) == expected_value:
+            filtered_variables.append(database[i])
+
+    return filtered_variables
+
+
+def probability_of_one(successful_cases, number_of_data):
+    return successful_cases/number_of_data
+
+

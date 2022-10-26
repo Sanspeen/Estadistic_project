@@ -1,6 +1,4 @@
-import os
 import time
-import sys
 from menu_point_1 import *
 from Data import database
 
@@ -81,3 +79,14 @@ while True:
             os.system('cls')
             point_c(database)
             input('\nPresione <<ENTER>> para volver al menu principal.')
+
+        if chosen_index == 'd':
+            os.system('cls')
+            point_d()
+            input('\nPresione <<ENTER>> para volver al menu principal.')
+
+        if chosen_index == 'e':
+            os.system('cls')
+            point_e()
+            input('\nPresione <<ENTER>> para volver al menu principal.')
+
