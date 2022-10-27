@@ -119,3 +119,11 @@ def point_g():
           f' es del: %{round(probability_of_one(len(filtered_by_stratum), len(filtered_by_is_not_working)) * 100, 2)}')
 
 
+def point_h():
+    print(f'Para la solución de este punto tengo dos posibles respuestas:\n'
+          f"\033[;36m"+'Respuesta 1:'+"\033[0;m"+'Teniendo en cuenta que nuestra base de datos fue poblada con datos completamente aleatorios\n'
+          f'con unos limites definidos podriamos recalcar que nuestras variables son completamente independientes\n'
+          f' puesto a que ninguna de las dos cambia la manera en la que se comporta la otra\n')
+    print("\033[;36m"+'Respuesta 2:'+"\033[0;m"+'Teniendo en cuenta que el planteamiento incial se concentra en un contexto dentro de nuestra\n'
+          'universidad yo podria determinar que estas variables no son dependientes la una de las otras porque no hay\n'
+          'ningun determinante para que tu estrato socieconomico determine tu edad o viceversa.')

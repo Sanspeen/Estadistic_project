@@ -1,5 +1,7 @@
 import time
-from menu_point_1 import *
+import os
+import menu_point_1
+import menu_point_2
 from Data import database
 
 os.system('cls')
@@ -62,42 +64,58 @@ while True:
             try:
                 indx_var1 = continue_variables_for_users.index(var_1)
                 indx_var2 = continue_variables_for_users.index(var_2)
-                point_a(continue_variables[indx_var1], continue_variables[indx_var2])
+                menu_point_1.point_a(continue_variables[indx_var1], continue_variables[indx_var2])
                 input('\nPresione <<ENTER>> para continuar.')
 
             except:
                 print(
-                    'Lo siento, pero esa variable o no es continua aleatoria o no existe en nuestra base de datos... Te llevaremos al menú inicial.')
+                    'Lo siento, pero esa variable o no es continua aleatoria o no existe en nuestra'
+                    ' base de datos... Te llevaremos al menú inicial.')
                 time.sleep(3)
 
         if chosen_index == 'b':
             os.system('cls')
-            point_b(database)
+            menu_point_1.point_b(database)
             input('\nPresione <<ENTER>> para volver al menu principal.')
 
         if chosen_index == 'c':
             os.system('cls')
-            point_c(database)
+            menu_point_1.point_c(database)
             input('\nPresione <<ENTER>> para volver al menu principal.')
 
         if chosen_index == 'd':
             os.system('cls')
-            point_d()
+            menu_point_1.point_d()
             input('\nPresione <<ENTER>> para volver al menu principal.')
 
         if chosen_index == 'e':
             os.system('cls')
-            point_e()
+            menu_point_1.point_e()
             input('\nPresione <<ENTER>> para volver al menu principal.')
 
         if chosen_index == 'f':
             os.system('cls')
-            point_f()
+            menu_point_1.point_f()
             input('\nPresione <<ENTER>> para volver al menu principal.')
 
         if chosen_index == 'g':
             os.system('cls')
-            point_g()
+            menu_point_1.point_g()
             input('\nPresione <<ENTER>> para volver al menu principal.')
 
+        if chosen_index == 'h':
+            os.system('cls')
+            menu_point_1.point_h()
+            input('\nPresione <<ENTER>> para volver al menu principal.')
+
+    if chosen_point == '2':
+        os.system('cls')
+        print('Ingrese "x" para regresar al menú anterior.')
+        chosen_index = input("Elige el indice de del punto el cual deseas ver la solución (a, b, c, d, e, f ó g):")\
+            .lower()
+
+        if chosen_index == 'a':
+            os.system('cls')
+            menu_point_2.point_a(database)
+            input('\nPresione <<ENTER>> para volver al menu principal.')
 
