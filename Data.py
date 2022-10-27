@@ -550,6 +550,7 @@ database = [
         "isWorking": True
     }
 ]
+
 """database = [
     {
         "gender": "Female",
@@ -559,7 +560,7 @@ database = [
         "timeBackingHouse": 89.21,
         "lastSemesterAvg": 0.67,
         "enrollmentValue": 5000000.0,
-        "stratum": 6,
+        "stratum": 5,
         "isWorking": True
     },
     {
@@ -570,7 +571,7 @@ database = [
         "timeBackingHouse": 89.21,
         "lastSemesterAvg": 0.67,
         "enrollmentValue": 5000000.0,
-        "stratum": 6,
+        "stratum": 4,
         "isWorking": False
     },
     {

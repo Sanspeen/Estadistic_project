@@ -62,12 +62,25 @@ def point_b(data_base):
 def point_c(data_base):
     print('Tabla de frecuencias para Estrato:')
     print(f'{generate_frequency_table(data_base, "stratum")[0]}\n'
-          f'n: {generate_frequency_table(data_base, "stratum")[1]}')
-
+          f'n: {generate_frequency_table(data_base, "stratum")[1]}\n')
+    print('Intervalos:')
+    for i in range(0, len(generate_frequency_table(data_base, "stratum")[2][0])):
+        print(f'{i+1} = ({generate_frequency_table(data_base, "stratum")[2][1][i]}) '
+              f'- ({generate_frequency_table(data_base, "stratum")[2][0][i]})')
+    print('Al realizar los intervalos nos damos cuenta que a partir de MU +- 2Sigma los datos pertenecen al\n'
+          'teorema empirico.')
     print('')
     print('Tabla de frecuencias para TRAB:')
     print(f'{generate_frequency_table(data_base, "isWorking")[0]}\n'
-          f'n: {generate_frequency_table(data_base, "isWorking")[1]}')
+          f'n: {generate_frequency_table(data_base, "isWorking")[1]}\n')
+    print('Intervalos:')
+    for i in range(0, len(generate_frequency_table(data_base, "isWorking")[2][0])):
+        print(f'{i+1} = ({generate_frequency_table(data_base, "isWorking")[2][1][i]}) '
+              f'- ({generate_frequency_table(data_base, "isWorking")[2][0][i]})')
+
+    print('Primero que nada para este caso podremos concluir que la libreria por debajo transforma los valores de\n'
+          'Verdadero y Falso a 1 y 0 respectivamente de manera que nos entrega unos limites algo peculiares\n'
+          'Arrojando margenes de error bastante altos, llegando margenes de error casi del 300%.')
 
 
 def point_d():

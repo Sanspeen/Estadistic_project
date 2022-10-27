@@ -15,7 +15,7 @@ def random_variable_extractor(data_base, name_of_variable):
 
 
 def half(random_variable_array):
-    half_result = round(mean(random_variable_array))
+    half_result = round(mean(random_variable_array), 2)
     return half_result, f'La conclusión para la media aritmetica que obtuvimos es que el promedio\n' \
                                                    f'de nuestra variable tomada fue: {half_result}'
 
@@ -33,7 +33,7 @@ def standard_deviation(random_variable_array):
 
 
 def topic_deviation(random_variable_array):
-    return round(math.sqrt(standard_deviation(random_variable_array)))
+    return round(math.sqrt(standard_deviation(random_variable_array)[0]), 4)
 
 
 def is_working_separator(random_variable_array):
@@ -75,6 +75,9 @@ def convert_to_percentage(array_to_convert):
 
 def generate_frequency_table(data_base, variable_name):
     random_variable_array = random_variable_extractor(data_base, variable_name)
+    half_of_variable = half(random_variable_array)[0]
+    topic_deviation_of_variable = topic_deviation(random_variable_array)
+
     absolute_frequency = pd.Series(random_variable_array)
 
     data = {'f': absolute_frequency.value_counts(),
@@ -82,9 +85,24 @@ def generate_frequency_table(data_base, variable_name):
             'fr': absolute_frequency.value_counts()/len(absolute_frequency),
             '%': convert_to_percentage(absolute_frequency.value_counts()/len(absolute_frequency))}
 
+    # Separar esto en una funcion mas adelante.
+    top_intervals = []
+    bottom_intervals = []
+    for i in range(0, 3):
+        top_interval = round(half_of_variable + (i + 1) * topic_deviation_of_variable, 4)
+        top_intervals.append(top_interval)
+
+        bottom_interval = round(half_of_variable - (i + 1) * topic_deviation_of_variable, 4)
+        bottom_intervals.append(bottom_interval)
+    # Hasta aqui.
+    intervals = []
+    intervals.append(top_intervals)
+    intervals.append(bottom_intervals)
+
     n = len(random_variable_array)
     data = pd.DataFrame(data, pd.unique(absolute_frequency))
-    return data, n
+
+    return data, n, intervals
 
 
 def filter_by_variable_bool(data_base, name_of_variable):
