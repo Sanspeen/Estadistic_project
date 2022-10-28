@@ -15,7 +15,6 @@ def random_variable_extractor(data_base, name_of_variable):
 
 
 def half(random_variable_array):
-    print(random_variable_array)
     half_result = round(mean(random_variable_array), 2)
     return half_result, f'La conclusión para la media aritmetica que obtuvimos es que el promedio\n' \
                                                    f'de nuestra variable tomada fue: {half_result}'
