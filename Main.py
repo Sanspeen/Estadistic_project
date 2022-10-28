@@ -4,7 +4,7 @@ import menu_point_1
 import menu_point_2
 from Data import database
 
-os.system('cls')
+"""os.system('cls')
 print("██████╗░██████╗░░█████╗░██╗░░░██╗███████╗░█████╗░████████╗░█████╗░  ██████╗░███████╗\n" +
       "██╔══██╗██╔══██╗██╔══██╗╚██╗░██╔╝██╔════╝██╔══██╗╚══██╔══╝██╔══██╗  ██╔══██╗██╔════╝\n" +
       "██████╔╝██████╔╝██║░░██║░╚████╔╝░█████╗░░██║░░╚═╝░░░██║░░░██║░░██║  ██║░░██║█████╗░░\n" +
@@ -36,7 +36,7 @@ print(
     '╚═╝░░░░░╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚══╝░╚════╝░░╚════╝░  ╚═╝░░░░░╚═╝╚══════╝░╚════╝░╚═╝╚═╝░░╚═╝\n')
 time.sleep(3)
 os.system('cls')
-
+"""
 while True:
     os.system('cls')
     print('Ingrese "salir" cerrar la aplicación.')
@@ -117,5 +117,10 @@ while True:
         if chosen_index == 'a':
             os.system('cls')
             menu_point_2.point_a(database)
+            input('\nPresione <<ENTER>> para volver al menu principal.')
+
+        if chosen_index == 'b':
+            os.system('cls')
+            menu_point_2.point_b(database)
             input('\nPresione <<ENTER>> para volver al menu principal.')
 

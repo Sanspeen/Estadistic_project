@@ -40,6 +40,42 @@ def point_a(data_base):
     print(f'Desviacion estandar del valor de matricula para estrato 5: {standard_deviation_of_stratum_5}')
 
 
+def point_b(data_base):
+    genders = random_variable_extractor(data_base, 'gender')
+    gender_male = []
+    gender_female = []
+    # filter by gender
+    for i in genders:
+        if i == 'Male':
+            gender_male.append(i)
+        else:
+            gender_female.append(i)
+
+    female_half = len(gender_female) / len(data_base)
+    male_half = len(gender_male)/len(data_base)
+
+    male_error = possible_error(male_half, gender_male)
+    female_error = possible_error(female_half, gender_female)
+
+    male_intervals = []
+    female_intervals = []
+
+    male_intervals.append(round(ic_generator(male_half, male_error, 2.576)[0], 4))
+    male_intervals.append(round(ic_generator(male_half, male_error, 2.576)[1], 4))
+
+    female_intervals.append(round(ic_generator(female_half, female_error, 2.576)[0], 4))
+    female_intervals.append(round(ic_generator(female_half, female_error, 2.576)[1], 4))
+
+    print(f'Con base en los resultados anteriores podemos concluir que el 99% de las muestras de \n'
+          f'tamaño {len(data_base)} para los hombres tendran una "mu" comprendida entre este intervalo:'
+          f' {male_intervals}\n')
+
+    print(f'Con base en los resultados anteriores podemos concluir que el 99% de las muestras de \n'
+          f'tamaño {len(data_base)} para las mujeres tendran una "mu" comprendida entre este intervalo:'
+          f' {female_intervals}\n')
+
+    print('Por lo tanto se concluye que nuestros intervalos de confianza de hombres difieren de los de las mujeres.')
+
 
 
 

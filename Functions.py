@@ -15,6 +15,7 @@ def random_variable_extractor(data_base, name_of_variable):
 
 
 def half(random_variable_array):
+    print(random_variable_array)
     half_result = round(mean(random_variable_array), 2)
     return half_result, f'La conclusión para la media aritmetica que obtuvimos es que el promedio\n' \
                                                    f'de nuestra variable tomada fue: {half_result}'
@@ -23,7 +24,8 @@ def half(random_variable_array):
 def medium(random_variable_array):
     medium_index = math.ceil(len(random_variable_array) / 2)
     medium_value = random_variable_array[medium_index - 1]
-    return medium_value, medium_index, f'Nuestro punto medio de datos se encuentra en el indice: {medium_index} y toma el valor de: {medium_value}.'
+    return medium_value, medium_index, f'Nuestro punto medio de datos se encuentra en el indice: {medium_index}' \
+                                       f' y toma el valor de: {medium_value}.'
 
 
 def standard_deviation(random_variable_array):
@@ -129,6 +131,20 @@ def filter_by_punctual_value(data_base, name_of_variable, estimated_value):
 
 def probability_of_one(successful_cases, number_of_data):
     return successful_cases/number_of_data
+
+
+def possible_error(estimated_p, data_base):
+    return math.sqrt(estimated_p*(1-estimated_p)/len(data_base))
+
+
+def ic_generator(estimated_p, estimated_error, z_value):
+    bottom_interval = estimated_p - z_value * estimated_error
+    top_interval = estimated_p + z_value * estimated_error
+
+    return bottom_interval, top_interval
+
+
+
 
 
 
