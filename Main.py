@@ -124,3 +124,8 @@ while True:
             menu_point_2.point_b(database)
             input('\nPresione <<ENTER>> para volver al menu principal.')
 
+        if chosen_index == 'c':
+            os.system('cls')
+            menu_point_2.point_c(database)
+            input('\nPresione <<ENTER>> para volver al menu principal.')
+

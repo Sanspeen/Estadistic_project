@@ -77,6 +77,20 @@ def point_b(data_base):
     print('Por lo tanto se concluye que nuestros intervalos de confianza de hombres difieren de los de las mujeres.')
 
 
+def point_c(data_base):
+    sum = 0
+    organized_array = random_variable_extractor(data_base, 'lastSemesterAvg')
+    organized_array = sorted(organized_array, reverse=True)
+    five_percentage_of_array = math.ceil(len(organized_array) * 0.05)
+    for i in range(0, five_percentage_of_array):
+        sum += organized_array[i]
+
+    result = round(sum/five_percentage_of_array, 4)
+
+    print(f'Para ser del 5% de los mejores estudiantes, basandonos en nuestros promedios encontramos que\n'
+          f'se tendria que tener al menos una nota de {organized_array[five_percentage_of_array-1]} ya que el 5% de\n'
+          f'los estudiantes tienen un promedio dado de: {result}\n')
+    print(f'Las notas son: {organized_array}')
 
 
 

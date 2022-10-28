@@ -5,7 +5,7 @@ database = [
         "weight": 62,
         "age": 24,
         "timeBackingHouse": 63,
-        "lastSemesterAvg": 2,
+        "lastSemesterAvg": 2.4,
         "enrollmentValue": 3061445,
         "stratum": 3,
         "isWorking": False
@@ -16,7 +16,7 @@ database = [
         "weight": 90,
         "age": 23,
         "timeBackingHouse": 93,
-        "lastSemesterAvg": 3,
+        "lastSemesterAvg": 3.2,
         "enrollmentValue": 4375655,
         "stratum": 3,
         "isWorking": False
@@ -38,7 +38,7 @@ database = [
         "weight": 79,
         "age": 25,
         "timeBackingHouse": 114,
-        "lastSemesterAvg": 1,
+        "lastSemesterAvg": 1.8,
         "enrollmentValue": 2694273,
         "stratum": 3,
         "isWorking": True
@@ -60,7 +60,7 @@ database = [
         "weight": 67,
         "age": 18,
         "timeBackingHouse": 89,
-        "lastSemesterAvg": 3,
+        "lastSemesterAvg": 3.9,
         "enrollmentValue": 2831263,
         "stratum": 4,
         "isWorking": True
@@ -71,7 +71,7 @@ database = [
         "weight": 89,
         "age": 18,
         "timeBackingHouse": 118,
-        "lastSemesterAvg": 0,
+        "lastSemesterAvg": 0.6,
         "enrollmentValue": 4579876,
         "stratum": 5,
         "isWorking": True
@@ -82,7 +82,7 @@ database = [
         "weight": 71,
         "age": 24,
         "timeBackingHouse": 46,
-        "lastSemesterAvg": 2,
+        "lastSemesterAvg": 2.7,
         "enrollmentValue": 4647774,
         "stratum": 2,
         "isWorking": False
@@ -93,7 +93,7 @@ database = [
         "weight": 63,
         "age": 19,
         "timeBackingHouse": 44,
-        "lastSemesterAvg": 3,
+        "lastSemesterAvg": 3.1,
         "enrollmentValue": 2544661,
         "stratum": 2,
         "isWorking": True
@@ -115,7 +115,7 @@ database = [
         "weight": 92,
         "age": 22,
         "timeBackingHouse": 54,
-        "lastSemesterAvg": 1,
+        "lastSemesterAvg": 1.3,
         "enrollmentValue": 2190523,
         "stratum": 5,
         "isWorking": False
@@ -126,7 +126,7 @@ database = [
         "weight": 91,
         "age": 18,
         "timeBackingHouse": 48,
-        "lastSemesterAvg": 0,
+        "lastSemesterAvg": 0.5,
         "enrollmentValue": 2948830,
         "stratum": 3,
         "isWorking": False
@@ -137,7 +137,7 @@ database = [
         "weight": 73,
         "age": 24,
         "timeBackingHouse": 85,
-        "lastSemesterAvg": 0,
+        "lastSemesterAvg": 0.8,
         "enrollmentValue": 4349089,
         "stratum": 2,
         "isWorking": False
@@ -148,7 +148,7 @@ database = [
         "weight": 82,
         "age": 22,
         "timeBackingHouse": 72,
-        "lastSemesterAvg": 4,
+        "lastSemesterAvg": 4.1,
         "enrollmentValue": 2605021,
         "stratum": 2,
         "isWorking": False
@@ -159,7 +159,7 @@ database = [
         "weight": 68,
         "age": 25,
         "timeBackingHouse": 55,
-        "lastSemesterAvg": 1,
+        "lastSemesterAvg": 1.8,
         "enrollmentValue": 2573234,
         "stratum": 2,
         "isWorking": False
@@ -170,7 +170,7 @@ database = [
         "weight": 60,
         "age": 18,
         "timeBackingHouse": 80,
-        "lastSemesterAvg": 4,
+        "lastSemesterAvg": 4.1,
         "enrollmentValue": 4112908,
         "stratum": 2,
         "isWorking": False
@@ -181,7 +181,7 @@ database = [
         "weight": 80,
         "age": 25,
         "timeBackingHouse": 110,
-        "lastSemesterAvg": 2,
+        "lastSemesterAvg": 2.6,
         "enrollmentValue": 2736336,
         "stratum": 5,
         "isWorking": True
@@ -192,7 +192,7 @@ database = [
         "weight": 95,
         "age": 21,
         "timeBackingHouse": 110,
-        "lastSemesterAvg": 2,
+        "lastSemesterAvg": 2.1,
         "enrollmentValue": 4502072,
         "stratum": 4,
         "isWorking": True
@@ -203,7 +203,7 @@ database = [
         "weight": 74,
         "age": 23,
         "timeBackingHouse": 113,
-        "lastSemesterAvg": 3,
+        "lastSemesterAvg": 3.6,
         "enrollmentValue": 4790231,
         "stratum": 5,
         "isWorking": False
@@ -214,7 +214,7 @@ database = [
         "weight": 64,
         "age": 23,
         "timeBackingHouse": 63,
-        "lastSemesterAvg": 4,
+        "lastSemesterAvg": 4.2,
         "enrollmentValue": 3240928,
         "stratum": 5,
         "isWorking": True
@@ -236,7 +236,7 @@ database = [
         "weight": 75,
         "age": 25,
         "timeBackingHouse": 62,
-        "lastSemesterAvg": 3,
+        "lastSemesterAvg": 3.7,
         "enrollmentValue": 2236915,
         "stratum": 5,
         "isWorking": True
@@ -247,7 +247,7 @@ database = [
         "weight": 83,
         "age": 24,
         "timeBackingHouse": 42,
-        "lastSemesterAvg": 2,
+        "lastSemesterAvg": 2.2,
         "enrollmentValue": 2343793,
         "stratum": 5,
         "isWorking": True
@@ -258,7 +258,7 @@ database = [
         "weight": 82,
         "age": 21,
         "timeBackingHouse": 26,
-        "lastSemesterAvg": 2,
+        "lastSemesterAvg": 2.9,
         "enrollmentValue": 2426760,
         "stratum": 4,
         "isWorking": True
@@ -280,7 +280,7 @@ database = [
         "weight": 84,
         "age": 20,
         "timeBackingHouse": 96,
-        "lastSemesterAvg": 2,
+        "lastSemesterAvg": 2.7,
         "enrollmentValue": 3539378,
         "stratum": 2,
         "isWorking": False
@@ -291,7 +291,7 @@ database = [
         "weight": 63,
         "age": 24,
         "timeBackingHouse": 44,
-        "lastSemesterAvg": 4,
+        "lastSemesterAvg": 4.1,
         "enrollmentValue": 4928892,
         "stratum": 2,
         "isWorking": False
@@ -302,7 +302,7 @@ database = [
         "weight": 69,
         "age": 21,
         "timeBackingHouse": 120,
-        "lastSemesterAvg": 2,
+        "lastSemesterAvg": 2.4,
         "enrollmentValue": 4574943,
         "stratum": 3,
         "isWorking": False
@@ -313,7 +313,7 @@ database = [
         "weight": 78,
         "age": 18,
         "timeBackingHouse": 96,
-        "lastSemesterAvg": 2,
+        "lastSemesterAvg": 2.2,
         "enrollmentValue": 4641719,
         "stratum": 4,
         "isWorking": True
@@ -324,7 +324,7 @@ database = [
         "weight": 63,
         "age": 24,
         "timeBackingHouse": 34,
-        "lastSemesterAvg": 2,
+        "lastSemesterAvg": 2.9,
         "enrollmentValue": 4930990,
         "stratum": 5,
         "isWorking": True
@@ -335,7 +335,7 @@ database = [
         "weight": 73,
         "age": 18,
         "timeBackingHouse": 111,
-        "lastSemesterAvg": 4,
+        "lastSemesterAvg": 4.1,
         "enrollmentValue": 3531875,
         "stratum": 5,
         "isWorking": True
@@ -346,7 +346,7 @@ database = [
         "weight": 79,
         "age": 18,
         "timeBackingHouse": 62,
-        "lastSemesterAvg": 0,
+        "lastSemesterAvg": 0.9,
         "enrollmentValue": 3910944,
         "stratum": 4,
         "isWorking": True
@@ -357,7 +357,7 @@ database = [
         "weight": 70,
         "age": 22,
         "timeBackingHouse": 18,
-        "lastSemesterAvg": 0,
+        "lastSemesterAvg": 0.7,
         "enrollmentValue": 2322197,
         "stratum": 5,
         "isWorking": False
@@ -368,7 +368,7 @@ database = [
         "weight": 61,
         "age": 18,
         "timeBackingHouse": 64,
-        "lastSemesterAvg": 1,
+        "lastSemesterAvg": 1.5,
         "enrollmentValue": 2491675,
         "stratum": 3,
         "isWorking": True
@@ -390,7 +390,7 @@ database = [
         "weight": 61,
         "age": 24,
         "timeBackingHouse": 46,
-        "lastSemesterAvg": 1,
+        "lastSemesterAvg": 1.2,
         "enrollmentValue": 2857477,
         "stratum": 3,
         "isWorking": True
@@ -401,7 +401,7 @@ database = [
         "weight": 82,
         "age": 21,
         "timeBackingHouse": 46,
-        "lastSemesterAvg": 2,
+        "lastSemesterAvg": 2.9,
         "enrollmentValue": 3886406,
         "stratum": 2,
         "isWorking": True
@@ -434,7 +434,7 @@ database = [
         "weight": 69,
         "age": 19,
         "timeBackingHouse": 89,
-        "lastSemesterAvg": 2,
+        "lastSemesterAvg": 2.9,
         "enrollmentValue": 2758812,
         "stratum": 5,
         "isWorking": True
@@ -456,7 +456,7 @@ database = [
         "weight": 95,
         "age": 20,
         "timeBackingHouse": 90,
-        "lastSemesterAvg": 1,
+        "lastSemesterAvg": 1.1,
         "enrollmentValue": 2717393,
         "stratum": 3,
         "isWorking": False
@@ -500,7 +500,7 @@ database = [
         "weight": 65,
         "age": 21,
         "timeBackingHouse": 64,
-        "lastSemesterAvg": 3,
+        "lastSemesterAvg": 3.2,
         "enrollmentValue": 3916597,
         "stratum": 5,
         "isWorking": True
@@ -511,7 +511,7 @@ database = [
         "weight": 64,
         "age": 19,
         "timeBackingHouse": 59,
-        "lastSemesterAvg": 1,
+        "lastSemesterAvg": 1.7,
         "enrollmentValue": 3661401,
         "stratum": 3,
         "isWorking": False
@@ -522,7 +522,7 @@ database = [
         "weight": 64,
         "age": 21,
         "timeBackingHouse": 34,
-        "lastSemesterAvg": 0,
+        "lastSemesterAvg": 0.1,
         "enrollmentValue": 2588667,
         "stratum": 5,
         "isWorking": True
@@ -533,7 +533,7 @@ database = [
         "weight": 93,
         "age": 25,
         "timeBackingHouse": 62,
-        "lastSemesterAvg": 3,
+        "lastSemesterAvg": 3.8,
         "enrollmentValue": 2990454,
         "stratum": 4,
         "isWorking": True
@@ -569,6 +569,39 @@ database = [
         "age": 24,
         "timeBackingHouse": 89.21,
         "lastSemesterAvg": 0.67,
+        "enrollmentValue": 5000000.0,
+        "stratum": 4,
+        "isWorking": False
+    },
+{
+        "gender": "Female",
+        "height": 186.81,
+        "weight": 64.69,
+        "age": 24,
+        "timeBackingHouse": 89.21,
+        "lastSemesterAvg": 5,
+        "enrollmentValue": 5000000.0,
+        "stratum": 4,
+        "isWorking": False
+    },
+{
+        "gender": "Female",
+        "height": 186.81,
+        "weight": 64.69,
+        "age": 24,
+        "timeBackingHouse": 89.21,
+        "lastSemesterAvg": 4.67,
+        "enrollmentValue": 5000000.0,
+        "stratum": 4,
+        "isWorking": False
+    },
+{
+        "gender": "Female",
+        "height": 186.81,
+        "weight": 64.69,
+        "age": 24,
+        "timeBackingHouse": 89.21,
+        "lastSemesterAvg": 3.67,
         "enrollmentValue": 5000000.0,
         "stratum": 4,
         "isWorking": False
