@@ -93,6 +93,26 @@ def point_c(data_base):
     print(f'Las notas son: {organized_array}')
 
 
+def point_d(data_base):
+    organized_array = random_variable_extractor(data_base, 'lastSemesterAvg')
+    twenty_five_percentage_of_array = math.ceil(len(organized_array) * 0.25)
+    sum = 0
+    for i in range(0, twenty_five_percentage_of_array):
+        sum += organized_array[i]
+    result = round(sum / twenty_five_percentage_of_array, 4)
+
+    print(f'Para ser del 25% de los peores estudiantes, basandonos en nuestros promedios encontramos que\n'
+          f'se tendria que tener a lo sumo una nota de {organized_array[twenty_five_percentage_of_array - 1]}'
+          f' ya que el 25% de\n'
+          f'los estudiantes tienen un promedio dado de: {result}\n')
+    print(f'Las notas son: {organized_array}')
+
+
+
+
+
+
+
 
 
 
