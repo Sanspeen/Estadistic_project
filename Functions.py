@@ -84,6 +84,9 @@ def generate_frequency_table(data_base, variable_name):
     topic_deviation_of_variable = topic_deviation(random_variable_array)
 
     absolute_frequency = pd.Series(random_variable_array)
+    sum = 0
+    for i in absolute_frequency.value_counts():
+        sum += i/len(absolute_frequency)
 
     data = {'f': absolute_frequency.value_counts(),
             'F': accumulated_absolute_frequently(random_variable_array),
@@ -107,7 +110,7 @@ def generate_frequency_table(data_base, variable_name):
     n = len(random_variable_array)
     data = pd.DataFrame(data, pd.unique(absolute_frequency))
 
-    return data, n, intervals
+    return data, n, intervals, sum
 
 
 def filter_by_variable_bool(data_base, name_of_variable):

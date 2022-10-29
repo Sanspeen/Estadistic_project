@@ -1,5 +1,8 @@
 from Functions import *
 import os
+from scipy.stats import norm
+import matplotlib.pyplot as plt
+import numpy as np
 
 
 def point_a(data_base):
@@ -107,6 +110,10 @@ def point_d(data_base):
     print(f'Las notas son: {organized_array}')
 
 
+def point_e(data_base):
+    pass
+
+
 def point_f(data_base):
     academic_avg_array = random_variable_extractor(data_base, 'lastSemesterAvg')
     study_hours_array = random_variable_extractor(data_base, 'studyHours')
@@ -122,9 +129,13 @@ def point_g(data_base):
     half_of_variable = half(average_array)[0]
     topic_deviation_of_variable = topic_deviation(average_array)
     print(dist_intervals(half_of_variable, topic_deviation_of_variable))
-
-
-
+    print(dist_intervals(half_of_variable, topic_deviation_of_variable)[1][1])
+    x = np.arange(dist_intervals(half_of_variable, topic_deviation_of_variable)[1][1],
+                 dist_intervals(half_of_variable, topic_deviation_of_variable)[1][1], 0.001)
+    y = norm.pdf(x, 0, 1)
+    fig, ax = plt.subplots(figsize=(9, 6))
+    ax.plot(x, y)
+    plt.show()
 
 
 
