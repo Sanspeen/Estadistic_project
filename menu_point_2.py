@@ -1,4 +1,3 @@
-from Data import *
 from Functions import *
 import os
 
@@ -117,6 +116,12 @@ def point_f(data_base):
     print('\nSe implemento la correlacion de Spearman debido a que esta a diferencia de la re Pearson nos sirve\n'
           'para evaluar la correlacion entre dos variables continuas.')
 
+
+def point_g(data_base):
+    average_array = random_variable_extractor(data_base, 'lastSemesterAvg')
+    half_of_variable = half(average_array)[0]
+    topic_deviation_of_variable = topic_deviation(average_array)
+    print(dist_intervals(half_of_variable, topic_deviation_of_variable))
 
 
 

@@ -1,3 +1,5 @@
+import pandas as pd
+
 database = [
     {
         "gender": "Male",
@@ -668,3 +670,5 @@ database = [
         "isWorking": False
     }
 ]"""
+
+drinks_data = pd.read_csv('Copia_de_datos_bebidas.csv', sep=';')

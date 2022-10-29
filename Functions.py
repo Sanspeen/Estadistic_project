@@ -165,6 +165,22 @@ def linear_correlation(variable_1, variable_2, name_of_variable_1, name_of_varia
     return correlation
 
 
+def dist_intervals(half_of_variable, topic_deviation_of_variable):
+    top_intervals = []
+    bottom_intervals = []
+    intervals = []
+    for i in range(0, 3):
+        top_interval = round(half_of_variable + (i + 1) * topic_deviation_of_variable, 4)
+        top_intervals.append(top_interval)
+
+        bottom_interval = round(half_of_variable - (i + 1) * topic_deviation_of_variable, 4)
+        bottom_intervals.append(bottom_interval)
+    intervals.append(top_intervals)
+    intervals.append(bottom_intervals)
+    return intervals
+
+
+
 
 
 

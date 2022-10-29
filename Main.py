@@ -2,7 +2,8 @@ import time
 import os
 import menu_point_1
 import menu_point_2
-from Data import database
+import menu_point_3
+from Data import *
 
 """os.system('cls')
 print("██████╗░██████╗░░█████╗░██╗░░░██╗███████╗░█████╗░████████╗░█████╗░  ██████╗░███████╗\n" +
@@ -142,6 +143,22 @@ while True:
         if chosen_index == 'f':
             os.system('cls')
             menu_point_2.point_f(database)
+            input('\nPresione <<ENTER>> para volver al menu principal.')
+
+        if chosen_index == 'g':
+            os.system('cls')
+            menu_point_2.point_g(database)
+            input('\nPresione <<ENTER>> para volver al menu principal.')
+
+    if chosen_point == '3':
+        os.system('cls')
+        print('Ingrese "x" para regresar al menú anterior.')
+        chosen_index = input("Elige el indice de del punto el cual deseas ver la solución (a, b, c, d):") \
+            .lower()
+
+        if chosen_index == 'a':
+            os.system('cls')
+            menu_point_3.point_a(drinks_data)
             input('\nPresione <<ENTER>> para volver al menu principal.')
 
 
