@@ -4,6 +4,8 @@ import pandas as pd
 from numpy import mean
 import numpy as np
 from Data import database
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 
 def random_variable_extractor(data_base, name_of_variable):
@@ -141,6 +143,17 @@ def ic_generator(estimated_p, estimated_error, z_value):
     top_interval = estimated_p + z_value * estimated_error
 
     return bottom_interval, top_interval
+
+
+def linear_correlation(variable_1, variable_2, name_of_variable_1, name_of_variable_2):
+    plt.scatter(variable_1, variable_2)
+    plt.title('Diagrama de puntos.')
+    plt.xlabel(name_of_variable_1)
+    plt.ylabel(name_of_variable_2)
+    plt.grid()
+    plt.show()
+
+
 
 
 
