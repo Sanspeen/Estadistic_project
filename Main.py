@@ -139,7 +139,6 @@ while True:
             print('coming soon...')
             input('\nPresione <<ENTER>> para volver al menu principal.')
 
-
         if chosen_index == 'f':
             os.system('cls')
             menu_point_2.point_f(database)

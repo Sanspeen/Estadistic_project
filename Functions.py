@@ -6,6 +6,8 @@ import numpy as np
 from Data import database
 import matplotlib.pyplot as plt
 import seaborn as sns
+import pylab
+import scipy.stats as stats
 
 
 def random_variable_extractor(data_base, name_of_variable):
@@ -150,8 +152,18 @@ def linear_correlation(variable_1, variable_2, name_of_variable_1, name_of_varia
     plt.title('Diagrama de puntos.')
     plt.xlabel(name_of_variable_1)
     plt.ylabel(name_of_variable_2)
-    plt.grid()
+    plt.grid(linestyle='dotted')
     plt.show()
+
+    data = {
+        'Promedio ultimo semestre': variable_1,
+        'Horas estudiadas': variable_2
+    }
+
+    matriz = pd.DataFrame(data)
+    correlation = matriz.corr(method='spearman')
+    return correlation
+
 
 
 

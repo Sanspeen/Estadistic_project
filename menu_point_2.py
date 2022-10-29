@@ -111,8 +111,11 @@ def point_d(data_base):
 def point_f(data_base):
     academic_avg_array = random_variable_extractor(data_base, 'lastSemesterAvg')
     study_hours_array = random_variable_extractor(data_base, 'studyHours')
-    linear_correlation(academic_avg_array, study_hours_array,
-                           'promedio academico anterior semestre', 'Horas estudiadas fuera de clase')
+    print(linear_correlation(academic_avg_array, study_hours_array,'promedio academico anterior semestre',
+                             'Horas estudiadas fuera de clase'))
+
+    print('\nSe implemento la correlacion de Spearman debido a que esta a diferencia de la re Pearson nos sirve\n'
+          'para evaluar la correlacion entre dos variables continuas.')
 
 
 
