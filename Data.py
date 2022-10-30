@@ -671,4 +671,5 @@ database = [
     }
 ]"""
 
-drinks_data = pd.read_csv('Copia_de_datos_bebidas.csv', sep=';')
+drinks_data_from_csv = pd.read_csv('Copia_de_datos_bebidas.csv', sep=';')
+drinks_data = pd.DataFrame(drinks_data_from_csv)
