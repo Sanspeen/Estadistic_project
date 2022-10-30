@@ -1,4 +1,5 @@
 import pandas as pd
+from Functions import *
 
 
 def point_a(data_base):
@@ -50,6 +51,20 @@ def point_b(data_base):
 
     print(f'{(index_of_variable_2 - index_of_variable_1)/len(array_of_volumes) * 100}% seria la probabilidad de que\n'
           f'un vaso contenga entre 152 y 158ml.')
+
+
+def point_d(data_base):
+    volume_not_sorted = pd.DataFrame(data_base['Volumen (ml)'])
+    volume = volume_not_sorted.sort_values(by='Volumen (ml)')
+    array_of_volumes = []
+    for i in volume['Volumen (ml)']:
+        array_of_volumes.append(i)
+
+    five_percentage_of_array = math.ceil(len(array_of_volumes) * 0.05)
+
+    print(f'Todos los valores por debajo de: {array_of_volumes[five_percentage_of_array - 1]}, entrarian en el\n'
+          f'5% de los vasos con menos contenido.')
+
 
 
 
