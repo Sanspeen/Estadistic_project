@@ -53,6 +53,11 @@ def point_b(data_base):
           f'un vaso contenga entre 152 y 158ml.')
 
 
+def point_c(data_base):
+    print('Teniendo en cuenta que analizando la cantidad de vasos que cuenten con esta medida (155ml) en nuestra\n'
+          'base de datos y dado que no existe ninguno, podemos concluir que la probabilidad de que esto pase es de: 0%')
+
+
 def point_d(data_base):
     volume_not_sorted = pd.DataFrame(data_base['Volumen (ml)'])
     volume = volume_not_sorted.sort_values(by='Volumen (ml)')

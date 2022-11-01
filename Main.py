@@ -166,6 +166,11 @@ while True:
             menu_point_3.point_b(drinks_data)
             input('\nPresione <<ENTER>> para volver al menu principal.')
 
+        if chosen_index == 'c':
+            os.system('cls')
+            menu_point_3.point_c(drinks_data)
+            input('\nPresione <<ENTER>> para volver al menu principal.')
+
         if chosen_index == 'd':
             os.system('cls')
             menu_point_3.point_d(drinks_data)
