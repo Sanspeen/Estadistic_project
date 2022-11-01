@@ -111,7 +111,30 @@ def point_d(data_base):
 
 
 def point_e(data_base):
-    pass
+    is_working_array = filter_by_variable_bool(data_base, 'isWorking')[0]
+    is_not_working_array = filter_by_variable_bool(data_base, 'isWorking')[1]
+
+    study_of_workers = random_variable_extractor(is_working_array, 'studyHours')
+    study_not_workers = random_variable_extractor(is_not_working_array, 'studyHours')
+
+    is_working_half = half(study_of_workers)[0]
+    is_not_working_half = half(study_not_workers)[0]
+
+    input('Primero que nada planteamos la hipotesis nula que vendria a ser: Si el promedio de horas de estudio para\n'
+          'los que no trabajan es mayor... Con base en esta premisa analizaremos la base de datos y comprobaremos\n'
+          'al 100% si esta hipotesis es verdadera o falsa. Presione <<Enter>> para continuar.')
+    os.system('cls')
+
+    print(f'Horas de estudio personas que trabajan: {study_of_workers}')
+    print(f'Promedio trabajan:{is_working_half}\n')
+    print(f'Horas de estudio personas que NO trabajan: {study_not_workers}')
+    print(f'Promedio no trabajan:{is_not_working_half}\n')
+
+    if is_working_half > is_not_working_half:
+        print(f'Conclusion: Se rechaza la hipotesis nula puesto a que {is_working_half} >= {is_not_working_half}.')
+
+    else:
+        print(f'Conclusion: NO se rechaza la hipotesis nula puesto a que {is_working_half} < {is_not_working_half}.')
 
 
 def point_f(data_base):

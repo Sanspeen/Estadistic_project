@@ -137,7 +137,7 @@ while True:
 
         if chosen_index == 'e':
             os.system('cls')
-            print('coming soon...')
+            menu_point_2.point_e(database)
             input('\nPresione <<ENTER>> para volver al menu principal.')
 
         if chosen_index == 'f':
@@ -170,5 +170,3 @@ while True:
             os.system('cls')
             menu_point_3.point_d(drinks_data)
             input('\nPresione <<ENTER>> para volver al menu principal.')
-
-
