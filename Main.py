@@ -174,3 +174,10 @@ while True:
             os.system('cls')
             menu_point_3.point_d(drinks_data)
             input('\nPresione <<ENTER>> para volver al menu principal.')
+
+    if chosen_point == '4':
+        os.system('cls')
+        print('Ingrese "x" para regresar al menú anterior.')
+        chosen_index = input("Link del colab:"
+                             " https://colab.research.google.com/drive/1ZH2fpBb_5MjKdIbqIpMBttCwNn4uA5HD?usp=sharing") \
+            .lower()
