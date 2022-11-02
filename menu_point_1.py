@@ -1,13 +1,13 @@
 import os
 from Functions import *
-from Data import database
+from Data import data_base
 
 
 def point_a(var1, var2):
     os.system('cls')
     print(f'Resultado de la variable "{var1}":')
-    var1_array = random_variable_extractor(database, var1)
-    var2_array = random_variable_extractor(database, var2)
+    var1_array = random_variable_extractor(data_base, var1)
+    var2_array = random_variable_extractor(data_base, var2)
 
     print(f'Datos utilizados:{var2_array}\n')
     print(f"\nLa media de la variable es: {half(var1_array)[0]}.")
@@ -83,24 +83,25 @@ def point_c(data_base):
           'Arrojando margenes de error bastante altos, llegando margenes de error casi del 300%.')
 
 
-def point_d():
+def point_d(data_base):
     print(f'La cantidad de personas que trabajan dentro'
-          f' de nuestra base de datos es: {len(filter_by_variable_bool(database, "isWorking"))}')
-    print(f'La cantidad de datos totales de nuestra base es n = {len(database)}\n')
+          f' de nuestra base de datos es: {len(filter_by_variable_bool(data_base, "isWorking")[0])}')
+    print(f'La cantidad de datos totales de nuestra base es n = {len(data_base)}\n')
     print(f'Entonces tenemos que la probabilidad de que tomando una persona al azar esta trabaje'
-          f' es del: %{probability_of_one(len(filter_by_variable_bool(database, "isWorking")), len(database))*100}')
+          f' es del: '
+          f'%{round(probability_of_one(len(filter_by_variable_bool(data_base, "isWorking")[0]), len(data_base)) * 100, 4)}')
 
 
 def point_e():
     print(f'La cantidad de personas que pertenecen al estrato 4'
-          f' de nuestra base de datos es: {len(filter_by_punctual_value(database, "stratum", 4))}')
-    print(f'La cantidad de datos totales de nuestra base es n = {len(database)}\n')
+          f' de nuestra base de datos es: {len(filter_by_punctual_value(data_base, "stratum", 4))}')
+    print(f'La cantidad de datos totales de nuestra base es n = {len(data_base)}\n')
     print(f'Entonces tenemos que la probabilidad de que tomando una persona al azar esta pertenezca al estrato 4.'
-          f' es del: %{probability_of_one(len(filter_by_punctual_value(database, "stratum", 4)), len(database)) * 100}')
+          f' es del: %{probability_of_one(len(filter_by_punctual_value(data_base, "stratum", 4)), len(data_base)) * 100}')
 
 
 def point_f():
-    filtered_by_is_not_working = filter_by_variable_bool(database, "isWorking")[1]
+    filtered_by_is_not_working = filter_by_variable_bool(data_base, "isWorking")[1]
     filtered_by_stratum = []
     for i in filtered_by_is_not_working:
         if i.get('stratum') == 5:
@@ -112,20 +113,20 @@ def point_f():
     else:
         print(f'La cantidad de personas que no trabajan y que pertenecen al estrato 5'
               f' de nuestra base de datos son: {len(filtered_by_stratum)}')
-        print(f'La cantidad de datos totales de nuestra base es n = {len(database)}\n')
+        print(f'La cantidad de datos totales de nuestra base es n = {len(data_base)}\n')
         print(f'Entonces tenemos que la probabilidad de que tomando una persona al azar esta no trabaje'
-              f' y que pertenezca al estrato 5.'
-              f' es del: %{round(probability_of_one(len(filtered_by_stratum), len(database)) * 100, 2)}')
+              f' y que pertenezca al estrato 4.'
+              f' es del: {round(probability_of_one(len(filtered_by_stratum), len(data_base)) * 100, 2)}%')
 
 
 def point_g():
-    filtered_by_is_not_working = filter_by_variable_bool(database, "isWorking")[1]
+    filtered_by_is_not_working = filter_by_variable_bool(data_base, "isWorking")[1]
     filtered_by_stratum = []
     for i in filtered_by_is_not_working:
         if i.get('stratum') == 5:
             filtered_by_stratum.append(i)
 
-    print(f'La cantidad de personas que si no trabajan, pertenezcan al estrato 5'
+    print(f'Si las personas no trabajan, el numero de sujetos que pertenecen al estrato 5'
           f' de nuestra base de datos son: {len(filtered_by_stratum)}')
     print(f'La cantidad de datos totales de nuestra base es n = {len(filtered_by_is_not_working)}\n')
     print(f'Entonces tenemos que la probabilidad de que si una persona no trabaja, esta pertenezca al estrato 5'

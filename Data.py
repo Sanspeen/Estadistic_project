@@ -1,6 +1,6 @@
 import pandas as pd
 
-database = [
+data_base = [
     {
         "gender": "Male",
         "height": 151,

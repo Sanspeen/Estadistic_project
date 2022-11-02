@@ -3,6 +3,9 @@ import os
 from scipy.stats import norm
 import matplotlib.pyplot as plt
 import numpy as np
+from numpy.random import seed, randn
+from scipy.stats import normaltest, shapiro
+from statsmodels.graphics.gofplots import qqplot
 
 
 def point_a(data_base):
@@ -149,16 +152,24 @@ def point_f(data_base):
 
 def point_g(data_base):
     average_array = random_variable_extractor(data_base, 'lastSemesterAvg')
-    half_of_variable = half(average_array)[0]
-    topic_deviation_of_variable = topic_deviation(average_array)
-    print(dist_intervals(half_of_variable, topic_deviation_of_variable))
-    print(dist_intervals(half_of_variable, topic_deviation_of_variable)[1][1])
-    x = np.arange(dist_intervals(half_of_variable, topic_deviation_of_variable)[1][1],
-                 dist_intervals(half_of_variable, topic_deviation_of_variable)[1][1], 0.001)
-    y = norm.pdf(x, 0, 1)
-    fig, ax = plt.subplots(figsize=(9, 6))
-    ax.plot(x, y)
+    plt.hist(average_array)
+    plt.title('Histograma de una variable promedio del ultimo semestre')
+    plt.xlabel('Valor de la variable')
+    plt.ylabel('Conteo')
     plt.show()
+
+    stat, p = shapiro(average_array)
+    print('shapiro')
+    print('Estadisticos=%.3f, p=%.3f' % (stat, p))
+    alpha = 0.05
+    if p > alpha:
+        print('La muestra parece Gaussiana o Normal (no se rechaza la hipótesis nula H0).')
+    else:
+        print('La muestra no parece Gaussiana o Normal(se rechaza la hipótesis nula H0).')
+
+    print('')
+
+
 
 
 

@@ -3,7 +3,7 @@ import statistics as sta
 import pandas as pd
 from numpy import mean
 import numpy as np
-from Data import database
+from Data import data_base
 import matplotlib.pyplot as plt
 import seaborn as sns
 import pylab
@@ -117,12 +117,12 @@ def filter_by_variable_bool(data_base, name_of_variable):
     filtered_variables_is_working = []
     filtered_variables_is_not_working = []
     for i in range(0, len(data_base)):
-        if database[i].get(name_of_variable):
-            filtered_variables_is_working.append(database[i])
+        if data_base[i].get(name_of_variable):
+            filtered_variables_is_working.append(data_base[i])
 
     for j in range(0, len(data_base)):
-        if not database[j].get(name_of_variable):
-            filtered_variables_is_not_working.append(database[j])
+        if not data_base[j].get(name_of_variable):
+            filtered_variables_is_not_working.append(data_base[j])
 
     return filtered_variables_is_working, filtered_variables_is_not_working
 
@@ -130,8 +130,8 @@ def filter_by_variable_bool(data_base, name_of_variable):
 def filter_by_punctual_value(data_base, name_of_variable, estimated_value):
     filtered_variables = []
     for i in range(0, len(data_base)):
-        if database[i].get(name_of_variable) == estimated_value:
-            filtered_variables.append(database[i])
+        if data_base[i].get(name_of_variable) == estimated_value:
+            filtered_variables.append(data_base[i])
     return filtered_variables
 
 

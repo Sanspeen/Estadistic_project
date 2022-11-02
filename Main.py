@@ -5,7 +5,7 @@ import menu_point_2
 import menu_point_3
 from Data import *
 
-"""os.system('cls')
+os.system('cls')
 print("██████╗░██████╗░░█████╗░██╗░░░██╗███████╗░█████╗░████████╗░█████╗░  ██████╗░███████╗\n" +
       "██╔══██╗██╔══██╗██╔══██╗╚██╗░██╔╝██╔════╝██╔══██╗╚══██╔══╝██╔══██╗  ██╔══██╗██╔════╝\n" +
       "██████╔╝██████╔╝██║░░██║░╚████╔╝░█████╗░░██║░░╚═╝░░░██║░░░██║░░██║  ██║░░██║█████╗░░\n" +
@@ -37,7 +37,6 @@ print(
     '╚═╝░░░░░╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚══╝░╚════╝░░╚════╝░  ╚═╝░░░░░╚═╝╚══════╝░╚════╝░╚═╝╚═╝░░╚═╝\n')
 time.sleep(3)
 os.system('cls')
-"""
 while True:
     os.system('cls')
     print('Ingrese "salir" cerrar la aplicación.')
@@ -76,17 +75,17 @@ while True:
 
         if chosen_index == 'b':
             os.system('cls')
-            menu_point_1.point_b(database)
+            menu_point_1.point_b(data_base)
             input('\nPresione <<ENTER>> para volver al menu principal.')
 
         if chosen_index == 'c':
             os.system('cls')
-            menu_point_1.point_c(database)
+            menu_point_1.point_c(data_base)
             input('\nPresione <<ENTER>> para volver al menu principal.')
 
         if chosen_index == 'd':
             os.system('cls')
-            menu_point_1.point_d()
+            menu_point_1.point_d(data_base)
             input('\nPresione <<ENTER>> para volver al menu principal.')
 
         if chosen_index == 'e':
@@ -117,37 +116,37 @@ while True:
 
         if chosen_index == 'a':
             os.system('cls')
-            menu_point_2.point_a(database)
+            menu_point_2.point_a(data_base)
             input('\nPresione <<ENTER>> para volver al menu principal.')
 
         if chosen_index == 'b':
             os.system('cls')
-            menu_point_2.point_b(database)
+            menu_point_2.point_b(data_base)
             input('\nPresione <<ENTER>> para volver al menu principal.')
 
         if chosen_index == 'c':
             os.system('cls')
-            menu_point_2.point_c(database)
+            menu_point_2.point_c(data_base)
             input('\nPresione <<ENTER>> para volver al menu principal.')
 
         if chosen_index == 'd':
             os.system('cls')
-            menu_point_2.point_d(database)
+            menu_point_2.point_d(data_base)
             input('\nPresione <<ENTER>> para volver al menu principal.')
 
         if chosen_index == 'e':
             os.system('cls')
-            menu_point_2.point_e(database)
+            menu_point_2.point_e(data_base)
             input('\nPresione <<ENTER>> para volver al menu principal.')
 
         if chosen_index == 'f':
             os.system('cls')
-            menu_point_2.point_f(database)
+            menu_point_2.point_f(data_base)
             input('\nPresione <<ENTER>> para volver al menu principal.')
 
         if chosen_index == 'g':
             os.system('cls')
-            menu_point_2.point_g(database)
+            menu_point_2.point_g(data_base)
             input('\nPresione <<ENTER>> para volver al menu principal.')
 
     if chosen_point == '3':
@@ -168,7 +167,7 @@ while True:
 
         if chosen_index == 'c':
             os.system('cls')
-            menu_point_3.point_c(drinks_data)
+            menu_point_3.point_c()
             input('\nPresione <<ENTER>> para volver al menu principal.')
 
         if chosen_index == 'd':

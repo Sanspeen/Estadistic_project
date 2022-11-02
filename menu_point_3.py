@@ -53,7 +53,7 @@ def point_b(data_base):
           f'un vaso contenga entre 152 y 158ml.')
 
 
-def point_c(data_base):
+def point_c():
     print('Teniendo en cuenta que analizando la cantidad de vasos que cuenten con esta medida (155ml) en nuestra\n'
           'base de datos y dado que no existe ninguno, podemos concluir que la probabilidad de que esto pase es de: 0%')
 
