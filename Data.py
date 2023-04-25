@@ -1,6 +1,46 @@
 import pandas as pd
 
-data_base = [
+drinks_data_from_csv = pd.read_csv('Copia_de_datos_bebidas.csv', sep=';')
+drinks_data = pd.DataFrame(drinks_data_from_csv)
+
+fetch_data_csv = pd.read_csv("datos_proyecto_de_aula.csv", sep=";")
+columns = list(fetch_data_csv)
+data_base = []
+
+student_data = {
+        "gender": "",
+        "height": 0,
+        "weight": 0,
+        "studyHours": 0.0,
+        "age": 0,
+        "timeBackingHouse": 0,
+        "lastSemesterAvg": 0.0,
+        "enrollmentValue": 0,
+        "stratum": 0,
+        "isWorking": False
+    }
+
+
+for j in range(0, len(fetch_data_csv)):
+    current_student = []
+    student_data = {}
+    for i in columns:
+        current_student.append(fetch_data_csv[i][j])
+    student_data["gender"] = current_student[0]
+    student_data["height"] = current_student[1]
+    student_data["weight"] = current_student[2]
+    student_data["studyHours"] = current_student[3]
+    student_data["age"] = current_student[4]
+    student_data["timeBackingHouse"] = current_student[5]
+    student_data["lastSemesterAvg"] = current_student[6]
+    student_data["enrollmentValue"] = current_student[7]
+    student_data["stratum"] = current_student[8]
+    student_data["isWorking"] = current_student[9]
+    data_base.append(student_data)
+
+
+
+"""data_base = [
     {
         "gender": "Male",
         "height": 151,
@@ -601,75 +641,4 @@ data_base = [
         "stratum": 3,
         "isWorking": False
     }
-]
-"""database = [
-    {
-        "gender": "Female",
-        "height": 186.81,
-        "weight": 64.69,
-        "age": 24,
-        "timeBackingHouse": 89.21,
-        "lastSemesterAvg": 0.67,
-        "enrollmentValue": 5000000.0,
-        "stratum": 5,
-        "isWorking": True
-    },
-    {
-        "gender": "Female",
-        "height": 186.81,
-        "weight": 64.69,
-        "age": 24,
-        "timeBackingHouse": 89.21,
-        "lastSemesterAvg": 0.67,
-        "enrollmentValue": 5000000.0,
-        "stratum": 4,
-        "isWorking": False
-    },
-{
-        "gender": "Female",
-        "height": 186.81,
-        "weight": 64.69,
-        "age": 24,
-        "timeBackingHouse": 89.21,
-        "lastSemesterAvg": 5,
-        "enrollmentValue": 5000000.0,
-        "stratum": 4,
-        "isWorking": False
-    },
-{
-        "gender": "Female",
-        "height": 186.81,
-        "weight": 64.69,
-        "age": 24,
-        "timeBackingHouse": 89.21,
-        "lastSemesterAvg": 4.67,
-        "enrollmentValue": 5000000.0,
-        "stratum": 4,
-        "isWorking": False
-    },
-{
-        "gender": "Female",
-        "height": 186.81,
-        "weight": 64.69,
-        "age": 24,
-        "timeBackingHouse": 89.21,
-        "lastSemesterAvg": 3.67,
-        "enrollmentValue": 5000000.0,
-        "stratum": 4,
-        "isWorking": False
-    },
-    {
-        "gender": "Male",
-        "height": 158.39,
-        "weight": 80.11,
-        "age": 22,
-        "timeBackingHouse": 71.5,
-        "lastSemesterAvg": 2.07,
-        "enrollmentValue": 5000000.0,
-        "stratum": 2,
-        "isWorking": False
-    }
 ]"""
-
-drinks_data_from_csv = pd.read_csv('Copia_de_datos_bebidas.csv', sep=';')
-drinks_data = pd.DataFrame(drinks_data_from_csv)

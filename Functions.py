@@ -3,11 +3,9 @@ import statistics as sta
 import pandas as pd
 from numpy import mean
 import numpy as np
-from Data import data_base
 import matplotlib.pyplot as plt
-import seaborn as sns
-import pylab
-import scipy.stats as stats
+
+
 
 
 def random_variable_extractor(data_base, name_of_variable):

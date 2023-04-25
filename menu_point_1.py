@@ -9,7 +9,7 @@ def point_a(var1, var2):
     var1_array = random_variable_extractor(data_base, var1)
     var2_array = random_variable_extractor(data_base, var2)
 
-    print(f'Datos utilizados:{var2_array}\n')
+    print(f'Datos utilizados:{var1_array}\n')
     print(f"\nLa media de la variable es: {half(var1_array)[0]}.")
     print(f'Interpretacion: {half(var1_array)[1]}')
 
