@@ -1,7 +1,6 @@
 import time
 import os
 
-import pandas as pd
 
 import menu_point_1
 import menu_point_2

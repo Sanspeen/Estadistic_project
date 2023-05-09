@@ -30,7 +30,7 @@ def medium(random_variable_array):
 
 
 def standard_deviation(random_variable_array):
-    return round(sta.pstdev(random_variable_array), 4), 'La desviacion estandar es la que nos muestra la dispercion entre nuestros datos, a mayor el numero presentado, mayor dispercion entre los datos tendremos...\n' \
+    return round(sta.stdev(random_variable_array), 4), 'La desviacion estandar es la que nos muestra la dispercion entre nuestros datos, a mayor el numero presentado, mayor dispercion entre los datos tendremos...\n' \
          f'por lo tanto nuestra desviacion estandar presenta un valor de: {round(sta.pstdev(random_variable_array), 4)}, Sí fuese 0 indicaria que no hay\n' \
          f'ninguna disperción.'
 
