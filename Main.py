@@ -25,18 +25,23 @@ while True:
 
         if chosen_index == 'a':
             os.system('cls')
-            continue_variables_for_users = ['altura', 'peso', 'volver a casa', 'promedio del semestre']
-            continue_variables = ['height', 'weight', 'timeBackingHouse', 'lastSemesterAvg']
+            #THIS BLOCK WILL BE MIGRATED TO TKINTER APP.
+
+            #Those variable names will have to be selected by buttons.
 
             print('Las variables disponibles son: (altura, peso, volver a casa, promedio del semestre)')
             var_1 = input('\nIngrese el nombre de la primer variable aleatoria de la lista para hacer los calculos:')
             var_2 = input('\nIngrese el nombre de la segunda variable aleatoria de la lista para hacer los calculos:')
+            #You have to delete this try
             try:
+                continue_variables_for_users = ['altura', 'peso', 'volver a casa', 'promedio del semestre']
                 indx_var1 = continue_variables_for_users.index(var_1)
                 indx_var2 = continue_variables_for_users.index(var_2)
+
+                continue_variables = ['height', 'weight', 'timeBackingHouse', 'lastSemesterAvg']
                 menu_point_1.point_a(continue_variables[indx_var1], continue_variables[indx_var2], var_1, var_2)
                 input('\nPresione <<ENTER>> para continuar.')
-
+            #SINCE HERE.
             except:
                 print(
                     'Lo siento, pero esa variable o no es continua aleatoria o no existe en nuestra'
