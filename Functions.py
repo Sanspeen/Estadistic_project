@@ -12,6 +12,7 @@ def random_variable_extractor(data_base, name_of_variable):
     extracted_variable_array = []
     for i in range(0, len(data_base)):
         extracted_variable_array.append(data_base[i].get(name_of_variable))
+
     extracted_variable_array.sort()
     return extracted_variable_array
 
@@ -30,8 +31,11 @@ def medium(random_variable_array):
 
 
 def standard_deviation(random_variable_array):
-    return round(sta.stdev(random_variable_array), 4), 'La desviacion estandar es la que nos muestra la dispercion entre nuestros datos, a mayor el numero presentado, mayor dispercion entre los datos tendremos...\n' \
-         f'por lo tanto nuestra desviacion estandar presenta un valor de: {round(sta.pstdev(random_variable_array), 4)}, Sí fuese 0 indicaria que no hay\n' \
+    return round(sta.stdev(random_variable_array), 4), \
+           'La desviacion estandar es la que nos muestra la dispercion entre nuestros datos, ' \
+           'a mayor el numero presentado, mayor dispercion entre los datos tendremos...\n' \
+         f'por lo tanto nuestra desviacion estandar presenta un valor de: ' \
+           f'{round(sta.stdev(random_variable_array), 4)}, Sí fuese 0 indicaria que no hay\n' \
          f'ninguna disperción.'
 
 

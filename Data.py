@@ -27,7 +27,11 @@ for j in range(0, len(fetch_data_csv)):
     for i in columns:
         current_student.append(fetch_data_csv[i][j])
 
-    student_data["gender"] = current_student[0]
+    if current_student[0] == "MUJER":
+        student_data["gender"] = True
+    elif current_student[0] == "HOMBRE":
+        student_data["gender"] = False
+
     student_data["height"] = current_student[1]
     student_data["weight"] = current_student[2]
     student_data["studyHours"] = current_student[3]
@@ -36,7 +40,10 @@ for j in range(0, len(fetch_data_csv)):
     student_data["lastSemesterAvg"] = current_student[6]
     student_data["enrollmentValue"] = current_student[7]
     student_data["stratum"] = current_student[8]
-    student_data["isWorking"] = current_student[9]
+    if current_student[9] == "SI":
+        student_data["isWorking"] = True
+    elif current_student[9] == "NO":
+        student_data["isWorking"] = False
     data_base.append(student_data)
 
 

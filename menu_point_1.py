@@ -34,42 +34,23 @@ def point_a(var1, var2, var1_users, var2_users):
 
 
 def point_b(data_base):
-    print("Solucion indice b, punto 1.\n")
-    is_working_users, not_working_users = is_working_separator(data_base)
-    is_working_time = random_variable_extractor(is_working_users, 'timeBackingHouse')
-    not_working_time = random_variable_extractor(not_working_users, 'timeBackingHouse')
-
-    print(f"\nLa media del tiempo para los que trabajan es: {half(is_working_time)[0]}.")
-    print(f"La media del tiempo para los que NO trabajan es: {half(not_working_time)[0]}.\n")
-
-    print(f'\nLa mediana de los que trabajan se encuentra en el indice: {medium(is_working_time)[1]}'
-          f' y su valor es: {medium(is_working_time)[0]}.')
-    print(f'La mediana de los que NO trabajan se encuentra en el indice: {medium(not_working_time)[1]}'
-          f' y su valor es: {medium(not_working_time)[0]}.')
-
-    print(f'\nDesviacion estandar de los que trabajan: {standard_deviation(is_working_time)[0]}')
-    print(f'Desviacion estandar de los que NO trabajan: {standard_deviation(not_working_time)[0]}')
-
-    print('\nConclusiones:')
-    print(f'De nuestra media podremos concluir que las personas que no trabajan se tardan menos en regresar a su casa '
-          f'en comparacion con los que si trabajan.')
-    print(f'De nuestra mediana podremos obtener que de nuestra muestra que tiene {len(data_base)} datos tenemos'
-          f' que son mas las personas de nuestra muestra que trabajan que las que NO trabajan.')
-    print(f'Por ultimo podemos evidenciar una mayor dispersión de datos de cuenta de nuestros usuarios que trabajan'
-          f' que los que no trabajan.')
-
+    print("Hay que hacerlo")
 
 def point_c(data_base):
-    print('Tabla de frecuencias para Estrato:')
-    print(f'{generate_frequency_table(data_base, "stratum")[0]}\n'
-          f'n: {generate_frequency_table(data_base, "stratum")[1]}\n')
+
+    #Here we have to rebuild this for gender.
+    print('Tabla de frecuencias para Genero:')
+    print('Tomando en cuenta True => Mujer y False => Hombre por facilidad en el manejo de datos binarios.')
+    print(f'{generate_frequency_table(data_base, "gender")[0]}\n'
+          f'n: {generate_frequency_table(data_base, "gender")[1]}\n')
     print('Intervalos:')
-    for i in range(0, len(generate_frequency_table(data_base, "stratum")[2][0])):
-        print(f'{i+1} = ({generate_frequency_table(data_base, "stratum")[2][1][i]}) '
-              f'- ({generate_frequency_table(data_base, "stratum")[2][0][i]})')
+    for i in range(0, len(generate_frequency_table(data_base, "gender")[2][0])):
+        print(f'{i+1} = ({generate_frequency_table(data_base, "gender")[2][1][i]}) '
+              f'- ({generate_frequency_table(data_base, "gender")[2][0][i]})')
     print('Al realizar los intervalos nos damos cuenta que a partir de MU +- 2Sigma los datos pertenecen al\n'
           'teorema empirico.')
     print('')
+    #Here we don't have to fix nothing.
     print('Tabla de frecuencias para TRAB:')
     print(f'{generate_frequency_table(data_base, "isWorking")[0]}\n'
           f'n: {generate_frequency_table(data_base, "isWorking")[1]}\n')
