@@ -3,9 +3,9 @@ from Functions import *
 from Data import data_base
 
 
-def point_a(var1, var2):
+def point_a(var1, var2, var1_users, var2_users):
     os.system('cls')
-    print(f'Resultado de la variable "{var1}":')
+    print(f'Resultado de la variable "{var1_users}":')
     var1_array = random_variable_extractor(data_base, var1)
     var2_array = random_variable_extractor(data_base, var2)
 
@@ -19,7 +19,7 @@ def point_a(var1, var2):
     print(f'\nDesviacion estandar: {standard_deviation(var1_array)[0]}')
     print(standard_deviation(var1_array)[1])
 
-    input(f'\nPara ver el resultado de la variable: "{var2}" presione <<ENTER>>.')
+    input(f'\nPara ver el resultado de la variable: "{var2_users}" presione <<ENTER>>.')
 
     os.system('cls')
     print(f'Datos utilizados:{var2_array}\n')

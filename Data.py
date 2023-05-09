@@ -26,6 +26,7 @@ for j in range(0, len(fetch_data_csv)):
     student_data = {}
     for i in columns:
         current_student.append(fetch_data_csv[i][j])
+
     student_data["gender"] = current_student[0]
     student_data["height"] = current_student[1]
     student_data["weight"] = current_student[2]
