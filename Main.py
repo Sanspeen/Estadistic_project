@@ -49,13 +49,19 @@ while True:
 
         if chosen_index == 'b':
             os.system('cls')
+            #THIS BLOCK WILL BE MIGRATED TO TKINTER APP.
             covariance, cov_answer = menu_point_1.point_b(data_base)
+            #THIS PART WILL BE DISPLAYED INTO THE APP
             print(f"Covarianza entre Val. Matricula y Estrato: {covariance}\nConclusion 1: {cov_answer}")
+            #SINCE HERE.
             input('\nPresione <<ENTER>> para volver al menu principal.')
 
         if chosen_index == 'c':
             os.system('cls')
+            #THIS BLOCK WILL BE MIGRATED TO TKINTER APP.
             menu_point_1.point_c(data_base)
+            #INSIDE THIS METHOD A LOT OF THINGS WILL BE RETURNED.
+            #SINCE HERE.
             input('\nPresione <<ENTER>> para volver al menu principal.')
 
         if chosen_index == 'd':

@@ -1,5 +1,4 @@
 import os
-import numpy as np
 from Functions import *
 from Data import data_base
 
@@ -40,15 +39,15 @@ def point_b(data_base):
 
     covariance = round(np.cov(enrollment_value, stratum)[0][1], 2)
 
-    return covariance, "Hallando el la covarianza entre el valor de la matricula y el estrato de los estudiantes\n" \
-                       "podemos saber que hay una fuerte relacion lineal directa ya que es un valor positivo\n" \
-                       "muy grande."
-
+    return covariance,\
+           "Hallando el la covarianza entre el valor de la matricula y el estrato de los estudiantes\n" \
+           "podemos saber que hay una fuerte relacion lineal directa ya que es un valor positivo\n" \
+           "muy grande. Lo cual indica que cuando el valor de una de nuestras variables aumenta.\n" \
+           "la otra también lo hará.",
 
 
 def point_c(data_base):
 
-    #Here we have to rebuild this for gender.
     print('Tabla de frecuencias para Genero:')
     print('Tomando en cuenta True => Mujer y False => Hombre por facilidad en el manejo de datos binarios.')
     print(f'{generate_frequency_table(data_base, "gender")[0]}\n'
@@ -60,7 +59,7 @@ def point_c(data_base):
     print('Al realizar los intervalos nos damos cuenta que a partir de MU +- 2Sigma los datos pertenecen al\n'
           'teorema empirico.')
     print('')
-    #Here we don't have to fix nothing.
+    # ------------------------------------------------------------------------------------------------------------------
     print('Tabla de frecuencias para TRAB:')
     print(f'{generate_frequency_table(data_base, "isWorking")[0]}\n'
           f'n: {generate_frequency_table(data_base, "isWorking")[1]}\n')
