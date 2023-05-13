@@ -74,12 +74,12 @@ def point_c(data_base):
 
 
 def point_d(data_base):
-    print(f'La cantidad de personas que trabajan dentro'
-          f' de nuestra base de datos es: {len(filter_by_variable_bool(data_base, "isWorking")[0])}')
-    print(f'La cantidad de datos totales de nuestra base es n = {len(data_base)}\n')
-    print(f'Entonces tenemos que la probabilidad de que tomando una persona al azar esta trabaje'
-          f' es del: '
-          f'%{round(probability_of_one(len(filter_by_variable_bool(data_base, "isWorking")[0]), len(data_base)) * 100, 4)}')
+    return f'La cantidad de personas que trabajan dentro'\
+        f' de nuestra base de datos es: {len(filter_by_variable_bool(data_base, "isWorking")[0])}',\
+        f'La cantidad de datos totales de nuestra base es n = {len(data_base)}\n',\
+        f'Entonces tenemos que la probabilidad de que tomando una persona al azar esta trabaje'\
+        f' es del: '\
+        f'%{round(probability_of_one(len(filter_by_variable_bool(data_base, "isWorking")[0]), len(data_base)) * 100, 4)}'
 
 
 def point_e():
