@@ -1,4 +1,5 @@
 import os
+import numpy as np
 from Functions import *
 from Data import data_base
 
@@ -34,7 +35,16 @@ def point_a(var1, var2, var1_users, var2_users):
 
 
 def point_b(data_base):
-    print("Hay que hacerlo")
+    enrollment_value = random_variable_extractor(data_base, "enrollmentValue")
+    stratum = random_variable_extractor(data_base, "stratum")
+
+    covariance = round(np.cov(enrollment_value, stratum)[0][1], 2)
+
+    return covariance, "Hallando el la covarianza entre el valor de la matricula y el estrato de los estudiantes\n" \
+                       "podemos saber que hay una fuerte relacion lineal directa ya que es un valor positivo\n" \
+                       "muy grande."
+
+
 
 def point_c(data_base):
 

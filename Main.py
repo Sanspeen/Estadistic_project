@@ -49,7 +49,8 @@ while True:
 
         if chosen_index == 'b':
             os.system('cls')
-            menu_point_1.point_b(data_base)
+            covariance, cov_answer = menu_point_1.point_b(data_base)
+            print(f"Covarianza entre Val. Matricula y Estrato: {covariance}\nConclusion 1: {cov_answer}")
             input('\nPresione <<ENTER>> para volver al menu principal.')
 
         if chosen_index == 'c':
