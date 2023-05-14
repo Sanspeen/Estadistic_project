@@ -145,13 +145,6 @@ def possible_error(estimated_p, data_base):
     return math.sqrt(estimated_p*(1-estimated_p)/len(data_base))
 
 
-def ic_generator(estimated_p, estimated_error, z_value):
-    bottom_interval = estimated_p - z_value * estimated_error
-    top_interval = estimated_p + z_value * estimated_error
-
-    return bottom_interval, top_interval
-
-
 def linear_correlation(variable_1, variable_2, name_of_variable_1, name_of_variable_2):
     plt.scatter(variable_1, variable_2)
     plt.title('Diagrama de puntos.')

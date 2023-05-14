@@ -1,11 +1,9 @@
 from Functions import *
 import os
-from scipy.stats import norm
 import matplotlib.pyplot as plt
-import numpy as np
-from numpy.random import seed, randn
+import statistics
 from scipy.stats import normaltest, shapiro
-from statsmodels.graphics.gofplots import qqplot
+from scipy import stats
 
 
 def point_a(data_base):
@@ -62,43 +60,24 @@ def point_a(data_base):
             "dentro de los mismos estratos."
             ]
 
+
 def point_b(data_base):
-    #HAY QUE REHACER ESTE PUNTO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    genders = random_variable_extractor(data_base, 'gender')
-    gender_male = []
-    gender_female = []
-    # filter by gender
-    for i in genders:
-        if i == 'Male':
-            gender_male.append(i)
-        else:
-            gender_female.append(i)
+    # HAY QUE REHACER ESTE PUNTO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    #b.	Construya un IC de confianza al 95% para la media poblacional de la variable PROM. Interprete.
+    average_data = random_variable_extractor(data_base, "lastSemesterAvg")
+    n_average = len(average_data)
+    average_half = half(average_data)[0]
+    alpha_divided_two = 0.025
+    standard_devitation_average = standard_deviation(average_data)[0]
+    z_aplha_div_2_value = round(stats.norm.ppf(1-alpha_divided_two), 4)
 
-    female_half = len(gender_female) / len(data_base)
-    male_half = len(gender_male)/len(data_base)
+    lowest_limit = average_half - z_aplha_div_2_value * (standard_devitation_average / math.sqrt(n_average))
+    highest_limit = average_half + z_aplha_div_2_value * (standard_devitation_average / math.sqrt(n_average))
 
-    male_error = possible_error(male_half, gender_male)
-    female_error = possible_error(female_half, gender_female)
-
-    male_intervals = []
-    female_intervals = []
-
-    male_intervals.append(round(ic_generator(male_half, male_error, 2.576)[0], 4))
-    male_intervals.append(round(ic_generator(male_half, male_error, 2.576)[1], 4))
-
-    female_intervals.append(round(ic_generator(female_half, female_error, 2.576)[0], 4))
-    female_intervals.append(round(ic_generator(female_half, female_error, 2.576)[1], 4))
-
-    print(f'Con base en los resultados anteriores podemos concluir que el 99% de las muestras de \n'
-          f'tamaño {len(data_base)} para los hombres tendran una "mu" comprendida entre este intervalo:'
-          f' {male_intervals}\n')
-
-    print(f'Con base en los resultados anteriores podemos concluir que el 99% de las muestras de \n'
-          f'tamaño {len(data_base)} para las mujeres tendran una "mu" comprendida entre este intervalo:'
-          f' {female_intervals}\n')
-
-    print('Por lo tanto se concluye que nuestros intervalos de confianza de hombres difieren de los de las mujeres.')
-
+    return average_half, (round(lowest_limit, 4), round(highest_limit, 4)),\
+           f"Conclusion: Podemos afirmar con una confianza del 95%," \
+            f"que el\npromedio de nuestra muestra se encuentra en el " \
+            f"intervalo: {(round(lowest_limit, 4), round(highest_limit, 4))}"
 
 def point_c(data_base):
     sum = 0
