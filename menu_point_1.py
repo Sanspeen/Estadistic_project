@@ -93,23 +93,22 @@ def point_e(data_base):
         f" es de: {round(probability_of_one(woman_counter, len(data_base)) * 100, 4)}%"
 
 
-def point_f():
+def point_f(data_base):
     filtered_by_is_not_working = filter_by_variable_bool(data_base, "isWorking")[1]
-    filtered_by_stratum = []
-    for i in filtered_by_is_not_working:
-        if i.get('stratum') == 5:
-            filtered_by_stratum.append(i)
+    prob_is_working = len(filtered_by_is_not_working)/len(data_base)
+    gender_list = random_variable_extractor(data_base, "gender")
+    success_case_is_man = 0
 
-    print(len(filtered_by_is_not_working))
-    if len(filtered_by_stratum) == 0:
-        print('No existe ningúna persona de estrato 5 en la base de datos.')
-    else:
-        print(f'La cantidad de personas que no trabajan y que pertenecen al estrato 5'
-              f' de nuestra base de datos son: {len(filtered_by_stratum)}')
-        print(f'La cantidad de datos totales de nuestra base es n = {len(data_base)}\n')
-        print(f'Entonces tenemos que la probabilidad de que tomando una persona al azar esta no trabaje'
-              f' y que pertenezca al estrato 4.'
-              f' es del: {round(probability_of_one(len(filtered_by_stratum), len(data_base)) * 100, 2)}%')
+    for gender in gender_list:
+        if not gender:
+            success_case_is_man += 1
+
+    prob_is_man = success_case_is_man / len(data_base)
+
+    prob_result = (prob_is_man * prob_is_working) * 100
+
+    return f"La probabilidad de que tomando un individuo al azar este no trabaje y sea hombre\n" \
+           f"es del: {round(prob_result, 4)}%"
 
 
 def point_g():

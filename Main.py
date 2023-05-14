@@ -84,7 +84,10 @@ while True:
 
         if chosen_index == 'f':
             os.system('cls')
-            menu_point_1.point_f()
+            # THIS BLOCK WILL BE MIGRATED TO TKINTER APP.
+            result = menu_point_1.point_f(data_base)
+            print(result)
+            # SINCE HERE.
             input('\nPresione <<ENTER>> para volver al menu principal.')
 
         if chosen_index == 'g':
