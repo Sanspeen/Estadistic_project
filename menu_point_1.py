@@ -113,23 +113,18 @@ def point_f(data_base):
 
 def point_g():
     filtered_by_is_not_working = filter_by_variable_bool(data_base, "isWorking")[1]
-    filtered_by_stratum = []
-    for i in filtered_by_is_not_working:
-        if i.get('stratum') == 5:
-            filtered_by_stratum.append(i)
+    prob_is_working_a = len(filtered_by_is_not_working) / len(data_base)
+    gender_list = random_variable_extractor(data_base, "gender")
+    success_case_is_man = 0
 
-    print(f'Si las personas no trabajan, el numero de sujetos que pertenecen al estrato 5'
-          f' de nuestra base de datos son: {len(filtered_by_stratum)}')
-    print(f'La cantidad de datos totales de nuestra base es n = {len(filtered_by_is_not_working)}\n')
-    print(f'Entonces tenemos que la probabilidad de que si una persona no trabaja, esta pertenezca al estrato 5'
-          f' es del: %{round(probability_of_one(len(filtered_by_stratum), len(filtered_by_is_not_working)) * 100, 2)}')
+    for gender in gender_list:
+        if not gender:
+            success_case_is_man += 1
 
+    prob_is_man_b = success_case_is_man / len(data_base)
+    prob_result_a_and_b = prob_is_man_b * prob_is_working_a
 
-def point_h():
-    print(f'Para la solución de este punto tengo dos posibles respuestas:\n'
-          f"\033[;36m"+'Respuesta 1:'+"\033[0;m"+'Teniendo en cuenta que nuestra base de datos fue poblada con datos completamente aleatorios\n'
-          f'con unos limites definidos podriamos recalcar que nuestras variables son completamente independientes\n'
-          f' puesto a que ninguna de las dos cambia la manera en la que se comporta la otra\n')
-    print("\033[;36m"+'Respuesta 2:'+"\033[0;m"+'Teniendo en cuenta que el planteamiento incial se concentra en un contexto dentro de nuestra\n'
-          'universidad yo podria determinar que estas variables no son dependientes la una de las otras porque no hay\n'
-          'ningun determinante para que tu estrato socieconomico determine tu edad o viceversa.')
+    prob_b_given_a = (prob_result_a_and_b / prob_is_working_a) * 100
+
+    return f"La probabilidad de elegir una persona al azar y que esta sea hombre dado que no trabaja\n" \
+           f"es del: {prob_b_given_a}%"

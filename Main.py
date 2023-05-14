@@ -92,13 +92,10 @@ while True:
 
         if chosen_index == 'g':
             os.system('cls')
-            menu_point_1.point_g()
+            result = menu_point_1.point_g()
+            print(result)
             input('\nPresione <<ENTER>> para volver al menu principal.')
 
-        if chosen_index == 'h':
-            os.system('cls')
-            menu_point_1.point_h()
-            input('\nPresione <<ENTER>> para volver al menu principal.')
 
     if chosen_point == '2':
         os.system('cls')
