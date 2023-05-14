@@ -82,12 +82,15 @@ def point_d(data_base):
         f'%{round(probability_of_one(len(filter_by_variable_bool(data_base, "isWorking")[0]), len(data_base)) * 100, 4)}'
 
 
-def point_e():
-    print(f'La cantidad de personas que pertenecen al estrato 4'
-          f' de nuestra base de datos es: {len(filter_by_punctual_value(data_base, "stratum", 4))}')
-    print(f'La cantidad de datos totales de nuestra base es n = {len(data_base)}\n')
-    print(f'Entonces tenemos que la probabilidad de que tomando una persona al azar esta pertenezca al estrato 4.'
-          f' es del: %{probability_of_one(len(filter_by_punctual_value(data_base, "stratum", 4)), len(data_base)) * 100}')
+def point_e(data_base):
+    gender_var = random_variable_extractor(data_base, "gender")
+    woman_counter = 0
+    for gender in gender_var:
+        if gender:
+            woman_counter += 1
+
+    return f"La probabilidad de que seleccionada al azar una persona, esta sea una mujer" \
+        f" es de: {round(probability_of_one(woman_counter, len(data_base)) * 100, 4)}%"
 
 
 def point_f():
