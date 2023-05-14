@@ -98,7 +98,6 @@ while True:
             # SINCE HERE.
             input('\nPresione <<ENTER>> para volver al menu principal.')
 
-
     if chosen_point == '2':
         os.system('cls')
         print('Ingrese "x" para regresar al menú anterior.')
@@ -116,10 +115,12 @@ while True:
 
         if chosen_index == 'b':
             os.system('cls')
+            # THIS BLOCK WILL BE MIGRATED TO TKINTER APP.
             estimated_mean, ic, conclusion = menu_point_2.point_b(data_base)
             print(f"X_Barra: {estimated_mean}")
             print(f"Intervalo de confianza: {ic}")
             print(conclusion)
+            # SINCE HERE.
             input('\nPresione <<ENTER>> para volver al menu principal.')
 
         if chosen_index == 'c':
@@ -139,13 +140,17 @@ while True:
             input('\nPresione <<ENTER>> para volver al menu principal.')
 
         if chosen_index == 'e':
+            # THIS ISN'T READY!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!.
             os.system('cls')
             menu_point_2.point_e(data_base)
             input('\nPresione <<ENTER>> para volver al menu principal.')
 
         if chosen_index == 'f':
             os.system('cls')
-            menu_point_2.point_f(data_base)
+            # THIS BLOCK WILL BE MIGRATED TO TKINTER APP.
+            result = menu_point_2.point_f(data_base)
+            print(result)
+            # SINCE HERE.
             input('\nPresione <<ENTER>> para volver al menu principal.')
 
         if chosen_index == 'g':

@@ -62,8 +62,6 @@ def point_a(data_base):
 
 
 def point_b(data_base):
-    # HAY QUE REHACER ESTE PUNTO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    #b.	Construya un IC de confianza al 95% para la media poblacional de la variable PROM. Interprete.
     average_data = random_variable_extractor(data_base, "lastSemesterAvg")
     n_average = len(average_data)
     average_half = half(average_data)[0]
@@ -138,12 +136,12 @@ def point_e(data_base):
 def point_f(data_base):
     academic_avg_array = random_variable_extractor(data_base, 'lastSemesterAvg')
     study_hours_array = random_variable_extractor(data_base, 'studyHours')
-    print(linear_correlation(academic_avg_array, study_hours_array,'promedio academico anterior semestre',
-                             'Horas estudiadas fuera de clase'))
 
-    print('\nSe implemento la correlacion de Spearman debido a que esta a diferencia de la re Pearson nos sirve\n'
-          'para evaluar la correlacion entre dos variables continuas.')
+    covariance = round(np.cov(academic_avg_array, study_hours_array)[0][1], 2)
 
+    return f"Podemos evidenciar que pese a que si existe una relacion lineal debido a que tenemos una " \
+           f"\ncovarianza positiva pero esta no es de un valor muy alto por lo cual su relacion no debe de\n" \
+           f"ser muy fuerte.\nCovarianza:{covariance}"
 
 def point_g(data_base):
     average_array = random_variable_extractor(data_base, 'lastSemesterAvg')
