@@ -17,7 +17,7 @@ while True:
         os.system('cls')
         print('Ingrese "x" para regresar al menú anterior.')
         chosen_index = input(
-            "Elige el indice de del punto el cual deseas ver la solución (a, b, c, d, e, f, g ó h):").lower()
+            "Elige el indice de del punto el cual deseas ver la solución (a, b, c, d, e, f ó g ):").lower()
 
         if chosen_index == 'x':
             continue
@@ -92,8 +92,10 @@ while True:
 
         if chosen_index == 'g':
             os.system('cls')
+            # THIS BLOCK WILL BE MIGRATED TO TKINTER APP.
             result = menu_point_1.point_g()
             print(result)
+            # SINCE HERE.
             input('\nPresione <<ENTER>> para volver al menu principal.')
 
 
@@ -105,7 +107,11 @@ while True:
 
         if chosen_index == 'a':
             os.system('cls')
-            menu_point_2.point_a(data_base)
+            # THIS BLOCK WILL BE MIGRATED TO TKINTER APP.
+            results = menu_point_2.point_a(data_base)
+            for result in results:
+                print(result)
+            # SINCE HERE.
             input('\nPresione <<ENTER>> para volver al menu principal.')
 
         if chosen_index == 'b':
