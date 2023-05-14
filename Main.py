@@ -102,7 +102,7 @@ while True:
     if chosen_point == '2':
         os.system('cls')
         print('Ingrese "x" para regresar al menú anterior.')
-        chosen_index = input("Elige el indice de del punto el cual deseas ver la solución (a, b, c, d, e, f ó g):")\
+        chosen_index = input("Elige el indice de del punto el cual deseas ver la solución (a, b, c ó d:")\
             .lower()
 
         if chosen_index == 'a':
@@ -115,33 +115,25 @@ while True:
             input('\nPresione <<ENTER>> para volver al menu principal.')
 
         if chosen_index == 'b':
+            # HAY QUE REHACER ESTE PUNTO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
             os.system('cls')
             menu_point_2.point_b(data_base)
             input('\nPresione <<ENTER>> para volver al menu principal.')
 
         if chosen_index == 'c':
             os.system('cls')
-            menu_point_2.point_c(data_base)
+            # THIS BLOCK WILL BE MIGRATED TO TKINTER APP.
+            result = menu_point_2.point_c(data_base)
+            print(result)
+            # SINCE HERE.
             input('\nPresione <<ENTER>> para volver al menu principal.')
 
         if chosen_index == 'd':
             os.system('cls')
-            menu_point_2.point_d(data_base)
-            input('\nPresione <<ENTER>> para volver al menu principal.')
-
-        if chosen_index == 'e':
-            os.system('cls')
-            menu_point_2.point_e(data_base)
-            input('\nPresione <<ENTER>> para volver al menu principal.')
-
-        if chosen_index == 'f':
-            os.system('cls')
-            menu_point_2.point_f(data_base)
-            input('\nPresione <<ENTER>> para volver al menu principal.')
-
-        if chosen_index == 'g':
-            os.system('cls')
-            menu_point_2.point_g(data_base)
+            # THIS BLOCK WILL BE MIGRATED TO TKINTER APP.
+            result = menu_point_2.point_d(data_base)
+            print(result)
+            # SINCE HERE.
             input('\nPresione <<ENTER>> para volver al menu principal.')
 
     if chosen_point == '3':

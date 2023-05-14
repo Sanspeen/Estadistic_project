@@ -63,6 +63,7 @@ def point_a(data_base):
             ]
 
 def point_b(data_base):
+    #HAY QUE REHACER ESTE PUNTO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     genders = random_variable_extractor(data_base, 'gender')
     gender_male = []
     gender_female = []
@@ -109,25 +110,23 @@ def point_c(data_base):
 
     result = round(sum/five_percentage_of_array, 4)
 
-    print(f'Para ser del 5% de los mejores estudiantes, basandonos en nuestros promedios encontramos que\n'
-          f'se tendria que tener al menos una nota de {organized_array[five_percentage_of_array-1]} ya que el 5% de\n'
-          f'los estudiantes tienen un promedio dado de: {result}\n')
-    print(f'Las notas son: {organized_array}')
+    return f'Para ser del 5% de los mejores estudiantes, basandonos en nuestros promedios encontramos que\n' \
+          f'se tendria que tener al menos una nota de {organized_array[five_percentage_of_array-1]} ya que el 5% de\n' \
+          f'los estudiantes tienen un promedio dado de: {result}\n' \
 
 
 def point_d(data_base):
     organized_array = random_variable_extractor(data_base, 'lastSemesterAvg')
-    twenty_five_percentage_of_array = math.ceil(len(organized_array) * 0.25)
+    five_percentage_of_array = math.ceil(len(organized_array) * 0.05)
     sum = 0
-    for i in range(0, twenty_five_percentage_of_array):
+    for i in range(0, five_percentage_of_array):
         sum += organized_array[i]
-    result = round(sum / twenty_five_percentage_of_array, 4)
+    result = round(sum / five_percentage_of_array, 4)
 
-    print(f'Para ser del 25% de los peores estudiantes, basandonos en nuestros promedios encontramos que\n'
-          f'se tendria que tener a lo sumo una nota de {organized_array[twenty_five_percentage_of_array - 1]}'
-          f' ya que el 25% de\n'
-          f'los estudiantes tienen un promedio dado de: {result}\n')
-    print(f'Las notas son: {organized_array}')
+    return f'Para ser del 25% de los peores estudiantes, basandonos en nuestros promedios encontramos que\n' \
+          f'se tendria que tener a lo sumo una nota de {organized_array[five_percentage_of_array - 1]}' \
+          f' ya que el 5% de\n' \
+          f'los estudiantes tienen un promedio dado de: {result}\n'
 
 
 def point_e(data_base):
