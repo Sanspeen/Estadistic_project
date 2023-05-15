@@ -155,7 +155,8 @@ while True:
 
         if chosen_index == 'g':
             os.system('cls')
-            menu_point_2.point_g(data_base)
+            result = menu_point_2.point_g(data_base)
+            print(result)
             input('\nPresione <<ENTER>> para volver al menu principal.')
 
     if chosen_point == '3':

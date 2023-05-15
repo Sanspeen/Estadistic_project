@@ -143,24 +143,16 @@ def point_f(data_base):
            f"\ncovarianza positiva pero esta no es de un valor muy alto por lo cual su relacion no debe de\n" \
            f"ser muy fuerte.\nCovarianza:{covariance}"
 
+
 def point_g(data_base):
-    average_array = random_variable_extractor(data_base, 'lastSemesterAvg')
-    plt.hist(average_array)
+    enrollment_value_array = random_variable_extractor(data_base, 'enrollmentValue')
+    plt.hist(enrollment_value_array)
     plt.title('Histograma de una variable promedio del ultimo semestre')
     plt.xlabel('Valor de la variable')
     plt.ylabel('Conteo')
     plt.show()
 
-    stat, p = shapiro(average_array)
-    print('shapiro')
-    print('Estadisticos=%.3f, p=%.3f' % (stat, p))
-    alpha = 0.05
-    if p > alpha:
-        print('La muestra parece Gaussiana o Normal (no se rechaza la hipótesis nula H0).')
-    else:
-        print('La muestra no parece Gaussiana o Normal(se rechaza la hipótesis nula H0).')
-
-    print('')
+    return f"Con base a la grafica anteriormente presentada podemos evidenciar una distribucion Chi cuadrado"
 
 
 
