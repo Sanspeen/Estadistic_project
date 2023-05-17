@@ -1,58 +1,39 @@
 import pandas as pd
 from Functions import *
+BEARS_TO_ORDER = [15000, 18000, 24000, 28000]  # Units of bears
+SELL_PRICE = 24  # Dollars
+BASE_PRICE = 16  # Dollars
+SALE_SELL_PRICE = 5  # Dollars
+EXPECTED_DEMAND = 20000  # Units of bears
+CONFIDENCE_LEVEL = 0.95  # Percentage
+DEMAND_IC = [10000, 30000]
 
 
-def point_a(data_base):
-    volume_not_sorted = pd.DataFrame(data_base['Volumen (ml)'])
-    volume = volume_not_sorted.sort_values(by='Volumen (ml)')
-    index_of_variable = 0
-    array_of_volumes = []
-
-    for i in volume['Volumen (ml)']:
-        array_of_volumes.append(i)
-
-    for i in range(0, len(array_of_volumes)):
-        item = array_of_volumes[i]
-        if float(item.replace(',', '.')) >= 153.0:
-            index_of_variable = i
-            break
-
-    less_glass = 0
-    for i in range(0, len(array_of_volumes)):
-        if array_of_volumes[i] < array_of_volumes[index_of_variable]:
-            less_glass += 1
-
-    print(f'El porcentaje de vasos que contendra menos de 150ml es de: {less_glass/len(array_of_volumes)*100}%')
+def point_a():
+    standard_devitation = round((DEMAND_IC[1] - DEMAND_IC[0]) / 6, 4)
+    # MAKE NORMAL GRAPH.
+    return EXPECTED_DEMAND, standard_devitation
 
 
-def point_b(data_base):
-    volume_not_sorted = pd.DataFrame(data_base['Volumen (ml)'])
-    volume = volume_not_sorted.sort_values(by='Volumen (ml)')
-    array_of_volumes = []
-    index_of_variable_1 = 0
-    index_of_variable_2 = 0
+def point_b():
+    premise = "Definimos X como la demanda.\n" \
+              "para tener de esta manera P(X < x).\n" \
+              "Tenemos una desviacion estandar de: 3333.3333.\n" \
+              f"Y una media de: {EXPECTED_DEMAND}"
+    answer_1 = f"Ingresando los datos para {BEARS_TO_ORDER[0]} en el aplicativo," \
+               f" tenemos que: P(X < {BEARS_TO_ORDER[0]}) = 0.0668 * 100 => 6.68%" \
+               f" de probabilidades de que la demanda sea menor que el stock esperado."
+    answer_2 = f"Ingresando los datos para {BEARS_TO_ORDER[1]} en el aplicativo," \
+               f" tenemos que: P(X < {BEARS_TO_ORDER[1]}) = 0.2742 * 100 => 27.47%" \
+               f" de probabilidades de que la demanda sea menor que el stock esperado."
+    answer_3 = f"Ingresando los datos para {BEARS_TO_ORDER[2]} en el aplicativo," \
+               f" tenemos que: P(X < {BEARS_TO_ORDER[2]}) = 0.8849 * 100 => 88.49%" \
+               f" de probabilidades de que la demanda sea menor que el stock esperado."
+    answer_4 = f"Ingresando los datos para {BEARS_TO_ORDER[3]} en el aplicativo," \
+               f" tenemos que: P(X < {BEARS_TO_ORDER[3]}) = 0.9918 * 100 => 99.18% de" \
+               f" probabilidades de que la demanda sea menor que el stock esperado."
 
-    for i in volume['Volumen (ml)']:
-        array_of_volumes.append(i)
-
-    for i in range(0, len(array_of_volumes)):
-        item = array_of_volumes[i]
-        if float(item.replace(',', '.')) >= 152.0:
-            index_of_variable_1 = i
-            break
-
-    array_lenght = len(array_of_volumes)-1
-    while array_lenght > 0:
-        item = array_of_volumes[array_lenght]
-        if float(item.replace(',', '.')) <= 158.0:
-            index_of_variable_2 = array_lenght
-            break
-        array_lenght -= 1
-
-    print(f'{(index_of_variable_2 - index_of_variable_1)/len(array_of_volumes) * 100}% seria la probabilidad de que\n'
-          f'un vaso contenga entre 152 y 158ml.')
-
-
+    return premise, answer_1, answer_2, answer_3, answer_4
 def point_c():
     print('Teniendo en cuenta que analizando la cantidad de vasos que cuenten con esta medida (155ml) en nuestra\n'
           'base de datos y dado que no existe ninguno, podemos concluir que la probabilidad de que esto pase es de: 0%')

@@ -162,7 +162,7 @@ while True:
     if chosen_point == '3':
         os.system('cls')
         print('Ingrese "x" para regresar al menú anterior.')
-        chosen_index = input("Elige el indice de del punto el cual deseas ver la solución (a, b, c, d):") \
+        chosen_index = input("Elige el indice de del punto el cual deseas ver la solución (a, b, c, d ó e):") \
             .lower()
 
         if chosen_index == 'a':
@@ -181,6 +181,11 @@ while True:
             input('\nPresione <<ENTER>> para volver al menu principal.')
 
         if chosen_index == 'd':
+            os.system('cls')
+            menu_point_3.point_d(drinks_data)
+            input('\nPresione <<ENTER>> para volver al menu principal.')
+
+        if chosen_index == 'e':
             os.system('cls')
             menu_point_3.point_d(drinks_data)
             input('\nPresione <<ENTER>> para volver al menu principal.')
