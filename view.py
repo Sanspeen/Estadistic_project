@@ -11,14 +11,16 @@ from Data import *
 
 # Indice A
 continue_variables_for_users = ['altura', 'peso', 'volver a casa', 'promedio del semestre']
-def show_results(user_val_1, user_val_2):
+answer = ""
+
+def show_results(user_val_1, user_val_2, result_lbl):
 
     indx_var1 = continue_variables_for_users.index(user_val_1)
     indx_var2 = continue_variables_for_users.index(user_val_2)
 
     continue_variables = ['height', 'weight', 'timeBackingHouse', 'lastSemesterAvg']
-    menu_point_1.point_a(continue_variables[indx_var1], continue_variables[indx_var2], user_val_1, user_val_2)
-
+    answer = menu_point_1.point_a(continue_variables[indx_var1], continue_variables[indx_var2], user_val_1, user_val_2)
+    result_lbl.config(text=f"Resultados: \n{answer}")
 
 def open_page_1_indx_1():
     new_window = tk.Toplevel(app)
@@ -44,17 +46,20 @@ def open_page_1_indx_1():
 
     combo_2.pack(pady=15)
 
-
-    submit_btn = tk.Button(new_window, text="Resultados", command=lambda: show_results(combo_1.get(), combo_2.get()), font=("Arial", 12), bg='#465ca9',
-                            fg='#ffffff', padx=20, pady=5)
-
-    submit_btn.pack(pady=11)
-
-
     back_button = tk.Button(new_window, text="Volver", command=new_window.destroy, font=("Arial", 12), bg='#465ca9',
                             fg='#ffffff', padx=20, pady=5)
     back_button.pack(pady=0)
 
+    result_lbl = tk.Label(new_window, text=f"Resultados:")
+    result_lbl.pack(pady=5)
+
+    submit_btn = tk.Button(new_window, text="Resultados", command=lambda: show_results(combo_1.get(), combo_2.get(), result_lbl),
+                           font=("Arial", 12), bg='#465ca9',
+                           fg='#ffffff', padx=20, pady=5)
+
+    submit_btn.pack(pady=11)
+
+#Termina punto 1.
 
 def show_frame(frame):
     frame.tkraise()

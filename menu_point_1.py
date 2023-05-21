@@ -4,33 +4,23 @@ from Data import data_base
 
 
 def point_a(var1, var2, var1_users, var2_users):
-    os.system('cls')
-    print(f'Resultado de la variable "{var1_users}":')
     var1_array = random_variable_extractor(data_base, var1)
     var2_array = random_variable_extractor(data_base, var2)
 
-    print(f'Datos utilizados:{var1_array}\n')
-    print(f"\nLa media de la variable es: {half(var1_array)[0]}.")
-    print(f'Interpretacion: {half(var1_array)[1]}')
-
-    print(f'\nLa mediana se encuentra en el indice: {medium(var1_array)[1]} y su valor es: {medium(var1_array)[0]}.')
-    print(medium(var1_array)[2])
-
-    print(f'\nDesviacion estandar: {standard_deviation(var1_array)[0]}')
-    print(standard_deviation(var1_array)[1])
-
-    input(f'\nPara ver el resultado de la variable: "{var2_users}" presione <<ENTER>>.')
-
-    os.system('cls')
-    print(f'Datos utilizados:{var2_array}\n')
-    print(f"\nLa media de la variable es: {half(var2_array)[0]}.")
-    print(f'Interpretacion: {half(var2_array)[1]}')
-
-    print(f'\nLa mediana se encuentra en el indice: {medium(var2_array)[1]} y su valor es: {medium(var2_array)[0]}.')
-    print(medium(var2_array)[2])
-
-    print(f'\nDesviacion estandar: {standard_deviation(var2_array)[0]}')
-    print(standard_deviation(var2_array)[1])
+    return f'Resultado de la variable "{var1_users}":' +\
+           f"\nLa media de la variable es: {half(var1_array)[0]}."+\
+           f'\nInterpretacion: {half(var1_array)[1]}'+\
+           f'\nLa mediana se encuentra en el indice: {medium(var1_array)[1]} y su valor es: {medium(var1_array)[0]}.'+\
+           f"\n{medium(var1_array)[2]}"+\
+           f'\nDesviacion estandar: {standard_deviation(var1_array)[0]}'+\
+           f"{standard_deviation(var1_array)[1]}"+ \
+           f"\n---------------Segunda variable------------------" + \
+           f"\nLa media de la variable es: {half(var2_array)[0]}."+\
+           f'\nInterpretacion: {half(var2_array)[1]}'+\
+           f'\nLa mediana se encuentra en el indice: {medium(var2_array)[1]} y su valor es: {medium(var2_array)[0]}.'+\
+           f"{medium(var2_array)[2]}"+\
+           f'\nDesviacion estandar: {standard_deviation(var2_array)[0]}'+\
+           f"{standard_deviation(var2_array)[1]}"
 
 
 def point_b(data_base):

@@ -26,13 +26,13 @@ def half(random_variable_array):
 def medium(random_variable_array):
     medium_index = math.ceil(len(random_variable_array) / 2)
     medium_value = random_variable_array[medium_index - 1]
-    return medium_value, medium_index, f'Nuestro punto medio de datos se encuentra en el indice: {medium_index}' \
+    return medium_value, medium_index, f'\nNuestro punto medio de datos se encuentra en el indice: {medium_index}' \
                                        f' y toma el valor de: {medium_value}.'
 
 
 def standard_deviation(random_variable_array):
     return round(sta.stdev(random_variable_array), 4), \
-           'La desviacion estandar es la que nos muestra la dispercion entre nuestros datos, ' \
+           '\nLa desviacion estandar es la que nos muestra la dispercion entre nuestros datos, ' \
            'a mayor el numero presentado, mayor dispercion entre los datos tendremos...\n' \
          f'por lo tanto nuestra desviacion estandar presenta un valor de: ' \
            f'{round(sta.stdev(random_variable_array), 4)}, Sí fuese 0 indicaria que no hay\n' \
