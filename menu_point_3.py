@@ -35,11 +35,32 @@ def point_b():
     return BEARS_TO_ORDER, prob_results
 
 
-
 def point_c():
-    print('Teniendo en cuenta que analizando la cantidad de vasos que cuenten con esta medida (155ml) en nuestra\n'
-          'base de datos y dado que no existe ninguno, podemos concluir que la probabilidad de que esto pase es de: 0%')
+    utility = 8
+    loses = 11
+    scenarios = EXPECTED_DEMANDS
 
+    order_scenarios = []
+
+    for order in BEARS_TO_ORDER:
+        order_calculated = []
+        for scenario in scenarios:
+            if scenario == 10000:
+                order_calculated.append((utility * scenario) - (loses * (order - scenario)))
+
+            elif scenario == 20000 and order < scenario:
+                order_calculated.append(utility * order)
+
+            elif scenario == 20000 and order > scenario:
+                order_calculated.append((utility * scenario) - (loses * abs((order - scenario))))
+
+            elif scenario == 30000 and order < scenario:
+                order_calculated.append(utility * order)
+
+        # Matrix where all of our scenarios and order demand get their loses or wins
+        order_scenarios.append(order_calculated)
+
+    return order_scenarios
 
 def point_d(data_base):
     volume_not_sorted = pd.DataFrame(data_base['Volumen (ml)'])
