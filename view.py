@@ -7,8 +7,6 @@ from Functions import *
 from Data import *
 
 # Indices de la pagina 1.
-
-
 # Indice A
 continue_variables_for_users = ['altura', 'peso', 'volver a casa', 'promedio del semestre']
 answer = ""
@@ -22,7 +20,7 @@ def show_results(user_val_1, user_val_2, result_lbl):
     answer = menu_point_1.point_a(continue_variables[indx_var1], continue_variables[indx_var2], user_val_1, user_val_2)
     result_lbl.config(text=f"Resultados: \n{answer}")
 
-def open_page_1_indx_1():
+def open_page_1_indx_a():
     new_window = tk.Toplevel(app)
     new_window.title("Punto a")
     new_window.geometry("900x900")
@@ -50,7 +48,7 @@ def open_page_1_indx_1():
                             fg='#ffffff', padx=20, pady=5)
     back_button.pack(pady=0)
 
-    result_lbl = tk.Label(new_window, text=f"Resultados:")
+    result_lbl = tk.Label(new_window, text=f"Resultados:") # Julian
     result_lbl.pack(pady=5)
 
     submit_btn = tk.Button(new_window, text="Resultados", command=lambda: show_results(combo_1.get(), combo_2.get(), result_lbl),
@@ -58,7 +56,22 @@ def open_page_1_indx_1():
                            fg='#ffffff', padx=20, pady=5)
 
     submit_btn.pack(pady=11)
+# Final Indice A
 
+# Indice B
+def open_page_1_indx_b():
+    new_window = tk.Toplevel(app)
+    new_window.title("Punto b")
+    new_window.geometry("600x600")
+    new_window.configure(bg='#7587c6')
+
+    label = tk.Label(new_window, text=f"Esta es la página", font=("Arial", 14), bg='#7587c6', fg='#ffffff')
+    label.pack(pady=30)
+
+    back_button = tk.Button(new_window, text="Volver", command=new_window.destroy, font=("Arial", 12), bg='#465ca9',
+                            fg='#ffffff', padx=20, pady=5)
+    back_button.pack(pady=0)
+# Indice B
 #Termina punto 1.
 
 def show_frame(frame):
@@ -109,8 +122,14 @@ button1.pack(fill=tk.X, padx=50, pady=10)
 
 i = 0
 btn_1 = tk.Button(window1, text=f"Punto a", font=("Arial", 12), bg='#4d4d4d', fg='#ffffff', padx=20, pady=5,
-                  command=lambda p=i: open_page_1_indx_1())
+                  command=lambda p=i: open_page_1_indx_a())
 btn_1.pack(pady=5)
+
+btn_2 = tk.Button(window1, text=f"Punto b", font=("Arial", 12), bg='#4d4d4d', fg='#ffffff', padx=20, pady=5,
+                  command=lambda p=i: open_page_1_indx_b())
+btn_2.pack(pady=5)
+
+
 
 # Ventana 2
 window2 = create_button_frame(app, "Esta es la ventana 2")
