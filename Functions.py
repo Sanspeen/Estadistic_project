@@ -177,6 +177,13 @@ def dist_intervals(half_of_variable, topic_deviation_of_variable):
     intervals.append(bottom_intervals)
     return intervals
 
+def pdf(x):
+    std = np.std(x)
+    mean = np.mean(x)
+    y_out = 1/(std * np.sqrt(2 * np.pi)) * np.exp(-(x-mean) ** 2/2 * std ** 2)
+    return y_out
+
+
 
 
 

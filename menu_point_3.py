@@ -1,39 +1,41 @@
-import pandas as pd
 from Functions import *
+from scipy.stats import norm
+import matplotlib.pyplot as plt
 BEARS_TO_ORDER = [15000, 18000, 24000, 28000]  # Units of bears
 SELL_PRICE = 24  # Dollars
 BASE_PRICE = 16  # Dollars
 SALE_SELL_PRICE = 5  # Dollars
-EXPECTED_DEMAND = 20000  # Units of bears
+EXPECTED_DEMANDS = [10000, 20000, 30000]  # Units of bears
 CONFIDENCE_LEVEL = 0.95  # Percentage
 DEMAND_IC = [10000, 30000]
 
 
 def point_a():
-    standard_devitation = round((DEMAND_IC[1] - DEMAND_IC[0]) / 6, 4)
-    # MAKE NORMAL GRAPH.
-    return EXPECTED_DEMAND, standard_devitation
+    z_95 = 1.96
+    alpha_half = round((1 - CONFIDENCE_LEVEL)/2, 4)
+    addition = 0
+    for number in EXPECTED_DEMANDS:
+        addition += number
+
+    miu = addition / len(EXPECTED_DEMANDS)
+
+    sigma = (30000 - 20000)/z_95
+
+    return miu, sigma
 
 
 def point_b():
-    premise = "Definimos X como la demanda.\n" \
-              "para tener de esta manera P(X < x).\n" \
-              "Tenemos una desviacion estandar de: 3333.3333.\n" \
-              f"Y una media de: {EXPECTED_DEMAND}"
-    answer_1 = f"Ingresando los datos para {BEARS_TO_ORDER[0]} en el aplicativo," \
-               f" tenemos que: P(X < {BEARS_TO_ORDER[0]}) = 0.0668 * 100 => 6.68%" \
-               f" de probabilidades de que la demanda sea menor que el stock esperado."
-    answer_2 = f"Ingresando los datos para {BEARS_TO_ORDER[1]} en el aplicativo," \
-               f" tenemos que: P(X < {BEARS_TO_ORDER[1]}) = 0.2742 * 100 => 27.47%" \
-               f" de probabilidades de que la demanda sea menor que el stock esperado."
-    answer_3 = f"Ingresando los datos para {BEARS_TO_ORDER[2]} en el aplicativo," \
-               f" tenemos que: P(X < {BEARS_TO_ORDER[2]}) = 0.8849 * 100 => 88.49%" \
-               f" de probabilidades de que la demanda sea menor que el stock esperado."
-    answer_4 = f"Ingresando los datos para {BEARS_TO_ORDER[3]} en el aplicativo," \
-               f" tenemos que: P(X < {BEARS_TO_ORDER[3]}) = 0.9918 * 100 => 99.18% de" \
-               f" probabilidades de que la demanda sea menor que el stock esperado."
+    miu = point_a()[0]
+    sigma = point_a()[1]
+    prob_results = []
 
-    return premise, answer_1, answer_2, answer_3, answer_4
+    for units in BEARS_TO_ORDER:
+        prob_results.append(round((units - miu) / sigma, 4))
+
+    return BEARS_TO_ORDER, prob_results
+
+
+
 def point_c():
     print('Teniendo en cuenta que analizando la cantidad de vasos que cuenten con esta medida (155ml) en nuestra\n'
           'base de datos y dado que no existe ninguno, podemos concluir que la probabilidad de que esto pase es de: 0%')

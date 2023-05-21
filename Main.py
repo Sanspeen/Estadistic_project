@@ -154,6 +154,7 @@ while True:
             input('\nPresione <<ENTER>> para volver al menu principal.')
 
         if chosen_index == 'g':
+            # It would be better.
             os.system('cls')
             result = menu_point_2.point_g(data_base)
             print(result)
@@ -166,13 +167,16 @@ while True:
             .lower()
 
         if chosen_index == 'a':
+            # Insert image with distriburion.
             os.system('cls')
-            menu_point_3.point_a(drinks_data)
+            menu_point_3.point_a()
             input('\nPresione <<ENTER>> para volver al menu principal.')
 
         if chosen_index == 'b':
+            # THIS BLOCK WILL BE MIGRATED TO TKINTER APP.
             os.system('cls')
-            menu_point_3.point_b(drinks_data)
+            menu_point_3.point_b()
+            # SINCE HERE.
             input('\nPresione <<ENTER>> para volver al menu principal.')
 
         if chosen_index == 'c':
@@ -182,12 +186,12 @@ while True:
 
         if chosen_index == 'd':
             os.system('cls')
-            menu_point_3.point_d(drinks_data)
+            menu_point_3.point_d()
             input('\nPresione <<ENTER>> para volver al menu principal.')
 
         if chosen_index == 'e':
             os.system('cls')
-            menu_point_3.point_d(drinks_data)
+            menu_point_3.point_d()
             input('\nPresione <<ENTER>> para volver al menu principal.')
 
     if chosen_point == '4':
