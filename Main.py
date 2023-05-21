@@ -6,6 +6,7 @@ import menu_point_1
 import menu_point_2
 import menu_point_3
 from Data import *
+
 while True:
     os.system('cls')
     print('Ingrese "salir" cerrar la aplicación.')
