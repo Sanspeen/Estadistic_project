@@ -62,18 +62,16 @@ def point_c():
 
     return order_scenarios
 
-def point_d(data_base):
-    volume_not_sorted = pd.DataFrame(data_base['Volumen (ml)'])
-    volume = volume_not_sorted.sort_values(by='Volumen (ml)')
-    array_of_volumes = []
-    for i in volume['Volumen (ml)']:
-        array_of_volumes.append(i)
 
-    five_percentage_of_array = math.ceil(len(array_of_volumes) * 0.05)
-
-    print(f'Todos los valores por debajo de: {array_of_volumes[five_percentage_of_array - 1]}, entrarian en el\n'
-          f'5% de los vasos con menos contenido.')
-
-
-
+def point_d():
+    miu = point_a()[0]
+    sigma = point_a()[1]
+    z_70 = 0.5244
+    P = 0.6985
+    order = z_70 * sigma + miu
+    results = []
+    for i in range(0, len(EXPECTED_DEMANDS)-1):
+        results.append(round((EXPECTED_DEMANDS[i] * 8) - (11 * (order - EXPECTED_DEMANDS[i])), 0))
+    results.append(round(order * 8, 0))
+    print(results)
 
