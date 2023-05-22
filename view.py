@@ -72,8 +72,266 @@ def open_page_1_indx_b():
                             fg='#ffffff', padx=20, pady=5)
     back_button.pack(pady=0)
 # Indice B
+#Indice C
+def open_page_1_indx_c():
+    new_window = tk.Toplevel(app)
+    new_window.title("Punto c")
+    new_window.geometry("600x600")
+    new_window.configure(bg='#7587c6')
+
+    label = tk.Label(new_window, text=f"Esta es la página", font=("Arial", 14), bg='#7587c6', fg='#ffffff')
+    label.pack(pady=30)
+
+    back_button = tk.Button(new_window, text="Volver", command=new_window.destroy, font=("Arial", 12), bg='#465ca9',
+                            fg='#ffffff', padx=20, pady=5)
+    back_button.pack(pady=0)
+#Indice C
+#Indice D
+def open_page_1_indx_d():
+    new_window = tk.Toplevel(app)
+    new_window.title("Punto d")
+    new_window.geometry("600x600")
+    new_window.configure(bg='#7587c6')
+
+    label = tk.Label(new_window, text=f"Esta es la página", font=("Arial", 14), bg='#7587c6', fg='#ffffff')
+    label.pack(pady=30)
+
+    back_button = tk.Button(new_window, text="Volver", command=new_window.destroy, font=("Arial", 12), bg='#465ca9',
+                            fg='#ffffff', padx=20, pady=5)
+    back_button.pack(pady=0)
+#Indice D
+#Indice E
+def open_page_1_indx_e():
+    new_window = tk.Toplevel(app)
+    new_window.title("Punto e")
+    new_window.geometry("600x600")
+    new_window.configure(bg='#7587c6')
+
+    label = tk.Label(new_window, text=f"Esta es la página", font=("Arial", 14), bg='#7587c6', fg='#ffffff')
+    label.pack(pady=30)
+
+    back_button = tk.Button(new_window, text="Volver", command=new_window.destroy, font=("Arial", 12), bg='#465ca9',
+                            fg='#ffffff', padx=20, pady=5)
+    back_button.pack(pady=0)
+#Indice E
+#Indice F
+def open_page_1_indx_f():
+    new_window = tk.Toplevel(app)
+    new_window.title("Punto f")
+    new_window.geometry("600x600")
+    new_window.configure(bg='#7587c6')
+
+    label = tk.Label(new_window, text=f"Esta es la página", font=("Arial", 14), bg='#7587c6', fg='#ffffff')
+    label.pack(pady=30)
+
+    back_button = tk.Button(new_window, text="Volver", command=new_window.destroy, font=("Arial", 12), bg='#465ca9',
+                            fg='#ffffff', padx=20, pady=5)
+    back_button.pack(pady=0)
+#Indice F
+#Indice G
+def open_page_1_indx_g():
+    new_window = tk.Toplevel(app)
+    new_window.title("Punto g")
+    new_window.geometry("600x600")
+    new_window.configure(bg='#7587c6')
+
+    label = tk.Label(new_window, text=f"Esta es la página", font=("Arial", 14), bg='#7587c6', fg='#ffffff')
+    label.pack(pady=30)
+
+    back_button = tk.Button(new_window, text="Volver", command=new_window.destroy, font=("Arial", 12), bg='#465ca9',
+                            fg='#ffffff', padx=20, pady=5)
+    back_button.pack(pady=0)
+#Indice G
 #Termina punto 1.
 
+#Punto 2
+#Indices de la pagina 2
+#Indice a
+def open_page_2_indx_a():
+    new_window = tk.Toplevel(app)
+    new_window.title("Punto a")
+    new_window.geometry("600x600")
+    new_window.configure(bg='#7587c6')
+
+    label = tk.Label(new_window, text=f"Esta es la página", font=("Arial", 14), bg='#7587c6', fg='#ffffff')
+    label.pack(pady=30)
+
+    back_button = tk.Button(new_window, text="Volver", command=new_window.destroy, font=("Arial", 12), bg='#465ca9',
+                            fg='#ffffff', padx=20, pady=5)
+    back_button.pack(pady=0)
+#Indice a
+#Indice b
+def open_page_2_indx_b():
+    new_window = tk.Toplevel(app)
+    new_window.title("Punto b")
+    new_window.geometry("600x600")
+    new_window.configure(bg='#7587c6')
+
+    label = tk.Label(new_window, text=f"Esta es la página", font=("Arial", 14), bg='#7587c6', fg='#ffffff')
+    label.pack(pady=30)
+
+    back_button = tk.Button(new_window, text="Volver", command=new_window.destroy, font=("Arial", 12), bg='#465ca9',
+                            fg='#ffffff', padx=20, pady=5)
+    back_button.pack(pady=0)
+#Indice b
+#Indice c
+def open_page_2_indx_c():
+    new_window = tk.Toplevel(app)
+    new_window.title("Punto c")
+    new_window.geometry("600x600")
+    new_window.configure(bg='#7587c6')
+
+    label = tk.Label(new_window, text=f"Esta es la página", font=("Arial", 14), bg='#7587c6', fg='#ffffff')
+    label.pack(pady=30)
+
+    back_button = tk.Button(new_window, text="Volver", command=new_window.destroy, font=("Arial", 12), bg='#465ca9',
+                            fg='#ffffff', padx=20, pady=5)
+    back_button.pack(pady=0)
+#Indice c
+#Indice d
+def open_page_2_indx_d():
+    new_window = tk.Toplevel(app)
+    new_window.title("Punto d")
+    new_window.geometry("600x600")
+    new_window.configure(bg='#7587c6')
+
+    label = tk.Label(new_window, text=f"Esta es la página", font=("Arial", 14), bg='#7587c6', fg='#ffffff')
+    label.pack(pady=30)
+
+    back_button = tk.Button(new_window, text="Volver", command=new_window.destroy, font=("Arial", 12), bg='#465ca9',
+                            fg='#ffffff', padx=20, pady=5)
+    back_button.pack(pady=0)
+#Indice d
+#Indice e
+def open_page_2_indx_e():
+    new_window = tk.Toplevel(app)
+    new_window.title("Punto e")
+    new_window.geometry("600x600")
+    new_window.configure(bg='#7587c6')
+
+    label = tk.Label(new_window, text=f"Esta es la página", font=("Arial", 14), bg='#7587c6', fg='#ffffff')
+    label.pack(pady=30)
+
+    back_button = tk.Button(new_window, text="Volver", command=new_window.destroy, font=("Arial", 12), bg='#465ca9',
+                            fg='#ffffff', padx=20, pady=5)
+    back_button.pack(pady=0)
+#Indice e
+#Indice f
+def open_page_2_indx_f():
+    new_window = tk.Toplevel(app)
+    new_window.title("Punto f")
+    new_window.geometry("600x600")
+    new_window.configure(bg='#7587c6')
+
+    label = tk.Label(new_window, text=f"Esta es la página", font=("Arial", 14), bg='#7587c6', fg='#ffffff')
+    label.pack(pady=30)
+
+    back_button = tk.Button(new_window, text="Volver", command=new_window.destroy, font=("Arial", 12), bg='#465ca9',
+                            fg='#ffffff', padx=20, pady=5)
+    back_button.pack(pady=0)
+#Indice f
+#Indice g
+def open_page_2_indx_g():
+    new_window = tk.Toplevel(app)
+    new_window.title("Punto g")
+    new_window.geometry("600x600")
+    new_window.configure(bg='#7587c6')
+
+    label = tk.Label(new_window, text=f"Esta es la página", font=("Arial", 14), bg='#7587c6', fg='#ffffff')
+    label.pack(pady=30)
+
+    back_button = tk.Button(new_window, text="Volver", command=new_window.destroy, font=("Arial", 12), bg='#465ca9',
+                            fg='#ffffff', padx=20, pady=5)
+    back_button.pack(pady=0)
+#indice g
+#Termina punto 2.
+#Indices de la pagina 3
+
+#Indice a
+def open_page_3_indx_a():
+    new_window = tk.Toplevel(app)
+    new_window.title("Punto a")
+    new_window.geometry("600x600")
+    new_window.configure(bg='#7587c6')
+
+    label = tk.Label(new_window, text=f"Esta es la página", font=("Arial", 14), bg='#7587c6', fg='#ffffff')
+    label.pack(pady=30)
+
+    back_button = tk.Button(new_window, text="Volver", command=new_window.destroy, font=("Arial", 12), bg='#465ca9',
+                            fg='#ffffff', padx=20, pady=5)
+    back_button.pack(pady=0)
+#Indice a
+#Indice b
+def open_page_3_indx_b():
+    new_window = tk.Toplevel(app)
+    new_window.title("Punto b")
+    new_window.geometry("600x600")
+    new_window.configure(bg='#7587c6')
+
+    label = tk.Label(new_window, text=f"Esta es la página", font=("Arial", 14), bg='#7587c6', fg='#ffffff')
+    label.pack(pady=30)
+
+    back_button = tk.Button(new_window, text="Volver", command=new_window.destroy, font=("Arial", 12), bg='#465ca9',
+                            fg='#ffffff', padx=20, pady=5)
+    back_button.pack(pady=0)
+#Indice b
+#Indice c
+def open_page_3_indx_c():
+    new_window = tk.Toplevel(app)
+    new_window.title("Punto c")
+    new_window.geometry("600x600")
+    new_window.configure(bg='#7587c6')
+
+    label = tk.Label(new_window, text=f"Esta es la página", font=("Arial", 14), bg='#7587c6', fg='#ffffff')
+    label.pack(pady=30)
+
+    back_button = tk.Button(new_window, text="Volver", command=new_window.destroy, font=("Arial", 12), bg='#465ca9',
+                            fg='#ffffff', padx=20, pady=5)
+    back_button.pack(pady=0)
+#Indice c
+#Indice d
+def open_page_3_indx_d():
+    new_window = tk.Toplevel(app)
+    new_window.title("Punto d")
+    new_window.geometry("600x600")
+    new_window.configure(bg='#7587c6')
+
+    label = tk.Label(new_window, text=f"Esta es la página", font=("Arial", 14), bg='#7587c6', fg='#ffffff')
+    label.pack(pady=30)
+
+    back_button = tk.Button(new_window, text="Volver", command=new_window.destroy, font=("Arial", 12), bg='#465ca9',
+                            fg='#ffffff', padx=20, pady=5)
+    back_button.pack(pady=0)
+#Indice d
+#Indice e
+def open_page_3_indx_e():
+    new_window = tk.Toplevel(app)
+    new_window.title("Punto e")
+    new_window.geometry("600x600")
+    new_window.configure(bg='#7587c6')
+
+    label = tk.Label(new_window, text=f"Esta es la página", font=("Arial", 14), bg='#7587c6', fg='#ffffff')
+    label.pack(pady=30)
+
+    back_button = tk.Button(new_window, text="Volver", command=new_window.destroy, font=("Arial", 12), bg='#465ca9',
+                            fg='#ffffff', padx=20, pady=5)
+    back_button.pack(pady=0)
+#Indice e
+#Termina punto 3
+#Punto 4
+def open_page_4_indx_4():
+    new_window = tk.Toplevel(app)
+    new_window.title("Punto 4")
+    new_window.geometry("600x600")
+    new_window.configure(bg='#7587c6')
+
+    label = tk.Label(new_window, text=f"Esta es la página", font=("Arial", 14), bg='#7587c6', fg='#ffffff')
+    label.pack(pady=30)
+
+    back_button = tk.Button(new_window, text="Volver", command=new_window.destroy, font=("Arial", 12), bg='#465ca9',
+                            fg='#ffffff', padx=20, pady=5)
+    back_button.pack(pady=0)
+#Punto 4
 def show_frame(frame):
     frame.tkraise()
 
@@ -129,7 +387,25 @@ btn_2 = tk.Button(window1, text=f"Punto b", font=("Arial", 12), bg='#4d4d4d', fg
                   command=lambda p=i: open_page_1_indx_b())
 btn_2.pack(pady=5)
 
+btn_3 = tk.Button(window1, text=f"Punto c", font=("Arial", 12), bg='#4d4d4d', fg='#ffffff', padx=20, pady=5,
+                  command=lambda p=i: open_page_1_indx_c())
+btn_3.pack(pady=5)
 
+btn_4 = tk.Button(window1, text=f"Punto d", font=("Arial", 12), bg='#4d4d4d', fg='#ffffff', padx=20, pady=5,
+                  command=lambda p=i: open_page_1_indx_d())
+btn_4.pack(pady=5)
+
+btn_5 = tk.Button(window1, text=f"Punto e", font=("Arial", 12), bg='#4d4d4d', fg='#ffffff', padx=20, pady=5,
+                  command=lambda p=i: open_page_1_indx_e())
+btn_5.pack(pady=5)
+
+btn_6 = tk.Button(window1, text=f"Punto f", font=("Arial", 12), bg='#4d4d4d', fg='#ffffff', padx=20, pady=5,
+                  command=lambda p=i: open_page_1_indx_f())
+btn_6.pack(pady=5)
+
+btn_7 = tk.Button(window1, text=f"Punto g", font=("Arial", 12), bg='#4d4d4d', fg='#ffffff', padx=20, pady=5,
+                  command=lambda p=i: open_page_1_indx_g())
+btn_7.pack(pady=5)
 
 # Ventana 2
 window2 = create_button_frame(app, "Esta es la ventana 2")
@@ -138,10 +414,35 @@ button2 = tk.Button(main_frame, text="Ventana 2", command=lambda: show_frame(win
                    fg='#ffffff', padx=20, pady=5)
 button2.pack(fill=tk.X, padx=50, pady=10)
 
-for i in range(1, 8):
-    btn_1 = tk.Button(window2, text=f"Botón {i}", font=("Arial", 12), bg='#4d4d4d', fg='#ffffff', padx=20, pady=5,
-                      command=lambda p=i: open_page(f"Página {p}"))
-    btn_1.pack(pady=5)
+i = 0
+
+btn_1 = tk.Button(window2, text=f"Punto a", font=("Arial", 12), bg='#4d4d4d', fg='#ffffff', padx=20, pady=5,
+                  command=lambda p=i: open_page_2_indx_a())
+btn_1.pack(pady=5)
+
+btn_2 = tk.Button(window2, text=f"Punto b", font=("Arial", 12), bg='#4d4d4d', fg='#ffffff', padx=20, pady=5,
+                  command=lambda p=i: open_page_2_indx_b())
+btn_2.pack(pady=5)
+
+btn_3 = tk.Button(window2, text=f"Punto c", font=("Arial", 12), bg='#4d4d4d', fg='#ffffff', padx=20, pady=5,
+                  command=lambda p=i: open_page_2_indx_c())
+btn_3.pack(pady=5)
+
+btn_4 = tk.Button(window2, text=f"Punto d", font=("Arial", 12), bg='#4d4d4d', fg='#ffffff', padx=20, pady=5,
+                  command=lambda p=i: open_page_2_indx_d())
+btn_4.pack(pady=5)
+
+btn_5 = tk.Button(window2, text=f"Punto e", font=("Arial", 12), bg='#4d4d4d', fg='#ffffff', padx=20, pady=5,
+                  command=lambda p=i: open_page_2_indx_e())
+btn_5.pack(pady=5)
+
+btn_6 = tk.Button(window2, text=f"Punto f", font=("Arial", 12), bg='#4d4d4d', fg='#ffffff', padx=20, pady=5,
+                  command=lambda p=i: open_page_2_indx_f())
+btn_6.pack(pady=5)
+
+btn_7 = tk.Button(window2, text=f"Punto g", font=("Arial", 12), bg='#4d4d4d', fg='#ffffff', padx=20, pady=5,
+                  command=lambda p=i: open_page_2_indx_g())
+btn_7.pack(pady=5)
 
 # Ventana 3
 window3 = create_button_frame(app, "Esta es la ventana 3")
@@ -150,10 +451,27 @@ button3 = tk.Button(main_frame, text="Ventana 3", command=lambda: show_frame(win
                    fg='#ffffff', padx=20, pady=5)
 button3.pack(fill=tk.X, padx=50, pady=10)
 
-for i in range(1, 8):
-    btn_1 = tk.Button(window3, text=f"Botón {i}", font=("Arial", 12), bg='#4d4d4d', fg='#ffffff', padx=20, pady=5,
-                      command=lambda p=i: open_page(f"Página {p}"))
-    btn_1.pack(pady=5)
+i=0
+
+btn_1 = tk.Button(window3, text=f"Punto a", font=("Arial", 12), bg='#4d4d4d', fg='#ffffff', padx=20, pady=5,
+                  command=lambda p=i: open_page_3_indx_a())
+btn_1.pack(pady=5)
+
+btn_2 = tk.Button(window3, text=f"Punto b", font=("Arial", 12), bg='#4d4d4d', fg='#ffffff', padx=20, pady=5,
+                  command=lambda p=i: open_page_3_indx_b())
+btn_2.pack(pady=5)
+
+btn_3 = tk.Button(window3, text=f"Punto c", font=("Arial", 12), bg='#4d4d4d', fg='#ffffff', padx=20, pady=5,
+                  command=lambda p=i: open_page_3_indx_c())
+btn_3.pack(pady=5)
+
+btn_4 = tk.Button(window3, text=f"Punto d", font=("Arial", 12), bg='#4d4d4d', fg='#ffffff', padx=20, pady=5,
+                  command=lambda p=i: open_page_3_indx_d())
+btn_4.pack(pady=5)
+
+btn_5 = tk.Button(window3, text=f"Punto e", font=("Arial", 12), bg='#4d4d4d', fg='#ffffff', padx=20, pady=5,
+                  command=lambda p=i: open_page_3_indx_e())
+btn_5.pack(pady=5)
 
 # Ventana 4
 window4 = create_button_frame(app, "Esta es la ventana 4")
@@ -162,10 +480,11 @@ button4 = tk.Button(main_frame, text="Ventana 4", command=lambda: show_frame(win
                    fg='#ffffff', padx=20, pady=5)
 button4.pack(fill=tk.X, padx=50, pady=10)
 
-for i in range(1, 8):
-    btn_1 = tk.Button(window4, text=f"Botón {i}", font=("Arial", 12), bg='#4d4d4d', fg='#ffffff', padx=20, pady=5,
-                      command=lambda p=i: open_page(f"Página {p}"))
-    btn_1.pack(pady=5)
+i=0
+
+btn_1 = tk.Button(window4, text=f"Punto 4:", font=("Arial", 12), bg='#4d4d4d', fg='#ffffff', padx=20, pady=5,
+                  command=lambda p=i: open_page_4_indx_4())
+btn_1.pack(pady=5)
 
 show_frame(main_frame)
 app.mainloop()
