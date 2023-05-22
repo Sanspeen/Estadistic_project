@@ -62,10 +62,13 @@ def open_page_1_indx_a():
 def open_page_1_indx_b():
     new_window = tk.Toplevel(app)
     new_window.title("Punto b")
-    new_window.geometry("600x600")
+    new_window.geometry("900x500")
     new_window.configure(bg='#7587c6')
+    covariance, cov_answer = menu_point_1.point_b(data_base)
 
-    label = tk.Label(new_window, text=f"Esta es la página", font=("Arial", 14), bg='#7587c6', fg='#ffffff')
+    label = tk.Label(new_window,
+                     text=f"Covarianza entre Val. Matricula y Estrato: {covariance}\nConclusion 1: {cov_answer}",
+                     font=("Arial", 14), bg='#7587c6', fg='#ffffff')
     label.pack(pady=30)
 
     back_button = tk.Button(new_window, text="Volver", command=new_window.destroy, font=("Arial", 12), bg='#465ca9',
@@ -76,24 +79,25 @@ def open_page_1_indx_b():
 def open_page_1_indx_c():
     new_window = tk.Toplevel(app)
     new_window.title("Punto c")
-    new_window.geometry("600x600")
+    new_window.geometry("900x600")
     new_window.configure(bg='#7587c6')
 
-    label = tk.Label(new_window, text=f"Esta es la página", font=("Arial", 14), bg='#7587c6', fg='#ffffff')
+    label = tk.Label(new_window, text=f"{menu_point_1.point_c(data_base)}", font=("Arial", 14), bg='#7587c6', fg='#ffffff')
     label.pack(pady=30)
 
     back_button = tk.Button(new_window, text="Volver", command=new_window.destroy, font=("Arial", 12), bg='#465ca9',
                             fg='#ffffff', padx=20, pady=5)
     back_button.pack(pady=0)
 #Indice C
+
 #Indice D
 def open_page_1_indx_d():
     new_window = tk.Toplevel(app)
     new_window.title("Punto d")
-    new_window.geometry("600x600")
+    new_window.geometry("800x500")
     new_window.configure(bg='#7587c6')
 
-    label = tk.Label(new_window, text=f"Esta es la página", font=("Arial", 14), bg='#7587c6', fg='#ffffff')
+    label = tk.Label(new_window, text=f"{menu_point_1.point_d(data_base)}", font=("Arial", 14), bg='#7587c6', fg='#ffffff')
     label.pack(pady=30)
 
     back_button = tk.Button(new_window, text="Volver", command=new_window.destroy, font=("Arial", 12), bg='#465ca9',
@@ -104,10 +108,11 @@ def open_page_1_indx_d():
 def open_page_1_indx_e():
     new_window = tk.Toplevel(app)
     new_window.title("Punto e")
-    new_window.geometry("600x600")
+    new_window.geometry("700x400")
     new_window.configure(bg='#7587c6')
 
-    label = tk.Label(new_window, text=f"Esta es la página", font=("Arial", 14), bg='#7587c6', fg='#ffffff')
+    label = tk.Label(new_window, text=f"{menu_point_1.point_e(data_base)}", font=("Arial", 14), bg='#7587c6',
+                     fg='#ffffff')
     label.pack(pady=30)
 
     back_button = tk.Button(new_window, text="Volver", command=new_window.destroy, font=("Arial", 12), bg='#465ca9',
@@ -118,10 +123,10 @@ def open_page_1_indx_e():
 def open_page_1_indx_f():
     new_window = tk.Toplevel(app)
     new_window.title("Punto f")
-    new_window.geometry("600x600")
+    new_window.geometry("800x300")
     new_window.configure(bg='#7587c6')
 
-    label = tk.Label(new_window, text=f"Esta es la página", font=("Arial", 14), bg='#7587c6', fg='#ffffff')
+    label = tk.Label(new_window, text=f"{menu_point_1.point_f(data_base)}", font=("Arial", 14), bg='#7587c6', fg='#ffffff')
     label.pack(pady=30)
 
     back_button = tk.Button(new_window, text="Volver", command=new_window.destroy, font=("Arial", 12), bg='#465ca9',
@@ -132,10 +137,11 @@ def open_page_1_indx_f():
 def open_page_1_indx_g():
     new_window = tk.Toplevel(app)
     new_window.title("Punto g")
-    new_window.geometry("600x600")
+    new_window.geometry("800x300")
     new_window.configure(bg='#7587c6')
 
-    label = tk.Label(new_window, text=f"Esta es la página", font=("Arial", 14), bg='#7587c6', fg='#ffffff')
+    label = tk.Label(new_window, text=f"{menu_point_1.point_g()}", font=("Arial", 14), bg='#7587c6',
+                     fg='#ffffff')
     label.pack(pady=30)
 
     back_button = tk.Button(new_window, text="Volver", command=new_window.destroy, font=("Arial", 12), bg='#465ca9',

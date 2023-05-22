@@ -38,37 +38,24 @@ def point_b(data_base):
 
 def point_c(data_base):
 
-    print('Tabla de frecuencias para Genero:')
-    print('Tomando en cuenta True => Mujer y False => Hombre por facilidad en el manejo de datos binarios.')
-    print(f'{generate_frequency_table(data_base, "gender")[0]}\n'
-          f'n: {generate_frequency_table(data_base, "gender")[1]}\n')
-    print('Intervalos:')
-    for i in range(0, len(generate_frequency_table(data_base, "gender")[2][0])):
-        print(f'{i+1} = ({generate_frequency_table(data_base, "gender")[2][1][i]}) '
-              f'- ({generate_frequency_table(data_base, "gender")[2][0][i]})')
-    print('Al realizar los intervalos nos damos cuenta que a partir de MU +- 2Sigma los datos pertenecen al\n'
-          'teorema empirico.')
-    print('')
-    # ------------------------------------------------------------------------------------------------------------------
-    print('Tabla de frecuencias para TRAB:')
-    print(f'{generate_frequency_table(data_base, "isWorking")[0]}\n'
-          f'n: {generate_frequency_table(data_base, "isWorking")[1]}\n')
-    print('Intervalos:')
-    for i in range(0, len(generate_frequency_table(data_base, "isWorking")[2][0])):
-        print(f'{i+1} = ({generate_frequency_table(data_base, "isWorking")[2][1][i]}) '
-              f'- ({generate_frequency_table(data_base, "isWorking")[2][0][i]})')
+    return 'Tabla de frecuencias para Genero:\n' +\
+                'Tomando en cuenta True => Mujer y False => Hombre por facilidad en el manejo de datos binarios.\n' +\
+                f'{generate_frequency_table(data_base, "gender")[0]}\n' +\
+                f'n: {generate_frequency_table(data_base, "gender")[1]}\n' +\
+                '-----------------------------------------------------------\n' +\
+                'Tabla de frecuencias para TRAB:\n' +\
+                f'{generate_frequency_table(data_base, "isWorking")[0]}\n' +\
+                f'n: {generate_frequency_table(data_base, "isWorking")[1]}\n'
 
-    print('Primero que nada para este caso podremos concluir que la libreria por debajo transforma los valores de\n'
-          'Verdadero y Falso a 1 y 0 respectivamente de manera que nos entrega unos limites algo peculiares\n'
-          'Arrojando margenes de error bastante altos, llegando margenes de error casi del 300%.')
 
 
 def point_d(data_base):
-    return f'La cantidad de personas que trabajan dentro'\
-        f' de nuestra base de datos es: {len(filter_by_variable_bool(data_base, "isWorking")[0])}',\
-        f'La cantidad de datos totales de nuestra base es n = {len(data_base)}\n',\
-        f'Entonces tenemos que la probabilidad de que tomando una persona al azar esta trabaje'\
-        f' es del: '\
+
+    return f'La cantidad de personas que trabajan dentro\n' +\
+        f' de nuestra base de datos es: {len(filter_by_variable_bool(data_base, "isWorking")[0])}\n' +\
+        f'La cantidad de datos totales de nuestra base es n = {len(data_base)}\n' +\
+        f'Entonces tenemos que la probabilidad de que tomando una persona al azar esta trabaje\n' +\
+        f' es del:\n' +\
         f'%{round(probability_of_one(len(filter_by_variable_bool(data_base, "isWorking")[0]), len(data_base)) * 100, 4)}'
 
 
@@ -79,8 +66,8 @@ def point_e(data_base):
         if gender:
             woman_counter += 1
 
-    return f"La probabilidad de que seleccionada al azar una persona, esta sea una mujer" \
-        f" es de: {round(probability_of_one(woman_counter, len(data_base)) * 100, 4)}%"
+    return f"La probabilidad de que seleccionada al azar una persona, esta sea una mujer\n" +\
+           f"es de: {round(probability_of_one(woman_counter, len(data_base)) * 100, 4)}%"
 
 
 def point_f(data_base):
@@ -97,7 +84,7 @@ def point_f(data_base):
 
     prob_result = (prob_is_man * prob_is_working) * 100
 
-    return f"La probabilidad de que tomando un individuo al azar este no trabaje y sea hombre\n" \
+    return f"La probabilidad de que tomando un individuo al azar este no trabaje y sea hombre\n" +\
            f"es del: {round(prob_result, 4)}%"
 
 
