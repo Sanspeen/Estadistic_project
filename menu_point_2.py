@@ -37,28 +37,22 @@ def point_a(data_base):
     half_of_stratum_6 = half(enrollment_value_stratum_6)[0]
     standard_deviation_of_stratum_6 = standard_deviation(enrollment_value_stratum_6)[0]
 
-    return [f'Promedio del valor de la matricula para estrato 1: {half_of_stratum_1}\n'
-            f'Desviacion estandar del valor de matricula para estrato 1: {standard_deviation_of_stratum_1}\n',
-
-            f'Promedio del valor de la matricula para estrato 2: {half_of_stratum_2}\n'
-            f'Desviacion estandar del valor de matricula para estrato 2: {standard_deviation_of_stratum_2}\n',
-
-            f'Promedio del valor de la matricula para estrato 3: {half_of_stratum_3}\n'
-            f'Desviacion estandar del valor de matricula para estrato 3: {standard_deviation_of_stratum_3}\n',
-
-            f'Promedio del valor de la matricula para estrato 4: {half_of_stratum_4}\n'
-            f'Desviacion estandar del valor de matricula para estrato 4: {standard_deviation_of_stratum_4}\n',
-
-            f'Promedio del valor de la matricula para estrato 5: {half_of_stratum_5}\n'
-            f'Desviacion estandar del valor de matricula para estrato 5: {standard_deviation_of_stratum_5}\n',
-
-            f'Promedio del valor de la matricula para estrato 6: {half_of_stratum_6}\n'
-            f'Desviacion estandar del valor de matricula para estrato 6: {standard_deviation_of_stratum_6}\n',
-
-            "Conclusion: A mayore estrato socieconomico podemos evidenciar un alza en el \nprecio esperado de"
-            " el valor de la matricula y diferencias sustanciales entre un precio y otro \n"
+    return  f'Promedio del valor de la matricula para estrato 1: {half_of_stratum_1}\n' +\
+            f'Desviacion estandar del valor de matricula para estrato 1: {standard_deviation_of_stratum_1}\n\n' +\
+            f'Promedio del valor de la matricula para estrato 2: {half_of_stratum_2}\n' +\
+            f'Desviacion estandar del valor de matricula para estrato 2: {standard_deviation_of_stratum_2}\n\n' +\
+            f'Promedio del valor de la matricula para estrato 3: {half_of_stratum_3}\n' +\
+            f'Desviacion estandar del valor de matricula para estrato 3: {standard_deviation_of_stratum_3}\n\n' +\
+            f'Promedio del valor de la matricula para estrato 4: {half_of_stratum_4}\n' +\
+            f'Desviacion estandar del valor de matricula para estrato 4: {standard_deviation_of_stratum_4}\n\n' +\
+            f'Promedio del valor de la matricula para estrato 5: {half_of_stratum_5}\n' +\
+            f'Desviacion estandar del valor de matricula para estrato 5: {standard_deviation_of_stratum_5}\n\n' +\
+            f'Promedio del valor de la matricula para estrato 6: {half_of_stratum_6}\n' +\
+            f'Desviacion estandar del valor de matricula para estrato 6: {standard_deviation_of_stratum_6}\n\n' +\
+            "Conclusion: A mayore estrato socieconomico podemos evidenciar un alza en el \nprecio esperado de\n" +\
+            " el valor de la matricula y diferencias sustanciales entre un precio y otro \n" +\
             "dentro de los mismos estratos."
-            ]
+
 
 
 def point_b(data_base):
@@ -73,8 +67,8 @@ def point_b(data_base):
     highest_limit = average_half + z_aplha_div_2_value * (standard_devitation_average / math.sqrt(n_average))
 
     return average_half, (round(lowest_limit, 4), round(highest_limit, 4)),\
-           f"Conclusion: Podemos afirmar con una confianza del 95%," \
-            f"que el\npromedio de nuestra muestra se encuentra en el " \
+            f"Conclusion: Podemos afirmar con una confianza del 95%," \
+            f"que el\npromedio de nuestra muestra de promedios academicos se encuentra en el " \
             f"intervalo: {(round(lowest_limit, 4), round(highest_limit, 4))}"
 
 def point_c(data_base):
@@ -87,9 +81,9 @@ def point_c(data_base):
 
     result = round(sum/five_percentage_of_array, 4)
 
-    return f'Para ser del 5% de los mejores estudiantes, basandonos en nuestros promedios encontramos que\n' \
-          f'se tendria que tener al menos una nota de {organized_array[five_percentage_of_array-1]} ya que el 5% de\n' \
-          f'los estudiantes tienen un promedio dado de: {result}\n' \
+    return f'Para ser del 5% de los mejores estudiantes, basandonos en nuestros promedios encontramos que\n' +\
+          f'se tendria que tener al menos una nota de {organized_array[five_percentage_of_array-1]} ya que el 5% de\n' +\
+          f'los estudiantes tienen un promedio dado de: {result}\n'
 
 
 def point_d(data_base):
@@ -100,9 +94,9 @@ def point_d(data_base):
         sum += organized_array[i]
     result = round(sum / five_percentage_of_array, 4)
 
-    return f'Para ser del 25% de los peores estudiantes, basandonos en nuestros promedios encontramos que\n' \
-          f'se tendria que tener a lo sumo una nota de {organized_array[five_percentage_of_array - 1]}' \
-          f' ya que el 5% de\n' \
+    return f'Para ser del 25% de los peores estudiantes, basandonos en nuestros promedios encontramos que\n' +\
+          f'se tendria que tener a lo sumo una nota de {organized_array[five_percentage_of_array - 1]}' +\
+          f' ya que el 5% de\n' +\
           f'los estudiantes tienen un promedio dado de: {result}\n'
 
 
@@ -116,22 +110,18 @@ def point_e(data_base):
     is_working_half = half(study_of_workers)[0]
     is_not_working_half = half(study_not_workers)[0]
 
-    input('Primero que nada planteamos la hipotesis nula que vendria a ser: Si el promedio de horas de estudio para\n'
-          'los que no trabajan es mayor... Con base en esta premisa analizaremos la base de datos y comprobaremos\n'
-          'al 100% si esta hipotesis es verdadera o falsa. Presione <<Enter>> para continuar.')
-    os.system('cls')
-
-    print(f'Horas de estudio personas que trabajan: {study_of_workers}')
-    print(f'Promedio trabajan:{is_working_half}\n')
-    print(f'Horas de estudio personas que NO trabajan: {study_not_workers}')
-    print(f'Promedio no trabajan:{is_not_working_half}\n')
+    answer_1 =  'Primero que nada planteamos la hipotesis nula que vendria a ser: Si el promedio de horas de estudio para\n' +\
+                'los que no trabajan es mayor... Con base en esta premisa analizaremos la base de datos y comprobaremos\n' +\
+                'al 100% si esta hipotesis es verdadera o falsa.\n' +\
+                f'Promedio trabajan:{is_working_half}\n' +\
+                f'Promedio no trabajan:{is_not_working_half}\n'
 
     if is_working_half > is_not_working_half:
-        print(f'Conclusion: Se rechaza la hipotesis nula puesto a que {is_working_half} >= {is_not_working_half}.')
-
+        answer_2 = f'Conclusion: Se rechaza la hipotesis nula puesto a que {is_working_half} >= {is_not_working_half}.'
+        return answer_1, answer_2
     else:
-        print(f'Conclusion: NO se rechaza la hipotesis nula puesto a que {is_working_half} < {is_not_working_half}.')
-
+        answer_2 = f'Conclusion: NO se rechaza la hipotesis nula puesto a que {is_working_half} < {is_not_working_half}.'
+        return answer_1, answer_2
 
 def point_f(data_base):
     academic_avg_array = random_variable_extractor(data_base, 'lastSemesterAvg')
@@ -145,14 +135,18 @@ def point_f(data_base):
 
 
 def point_g(data_base):
+
+
+    return f"Con base a la grafica anteriormente presentada podemos evidenciar una distribucion Chi cuadrado"
+
+
+def show_graphic(data_base):
     enrollment_value_array = random_variable_extractor(data_base, 'enrollmentValue')
     plt.hist(enrollment_value_array)
     plt.title('Histograma de una variable promedio del ultimo semestre')
     plt.xlabel('Valor de la variable')
     plt.ylabel('Conteo')
     plt.show()
-
-    return f"Con base a la grafica anteriormente presentada podemos evidenciar una distribucion Chi cuadrado"
 
 
 
