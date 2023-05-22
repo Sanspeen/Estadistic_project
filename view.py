@@ -388,7 +388,7 @@ def open_page_4_indx_4():
     new_window.geometry("1000x600")
     new_window.configure(bg='#7587c6')
 
-    text = tk.Text(new_window, text=f"En tu correo estara el link del colab profe :D", font=("Arial", 14), bg='#7587c6', fg='#ffffff')
+    text = tk.Label(new_window, text=f"En tu correo estara el link del colab profe :D", font=("Arial", 14), bg='#7587c6', fg='#ffffff')
     text.pack(pady=30)
 
     back_button = tk.Button(new_window, text="Volver", command=new_window.destroy, font=("Arial", 12), bg='#465ca9',
