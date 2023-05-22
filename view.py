@@ -3,6 +3,8 @@ from tkinter import messagebox, ttk
 import menu_point_1
 import menu_point_2
 import menu_point_3
+from PIL import ImageTk, Image
+from tkinter import  filedialog
 from tkinter import PhotoImage
 from tkinter import Canvas
 from PIL import ImageTk, Image
@@ -286,9 +288,19 @@ def open_page_3_indx_a():
                        bg='#7587c6', fg='#ffffff')
     label_1.pack(pady=30)
 
+    image = Image.open("giff.gif")
+    image = image.resize((500, 400), Image.LANCZOS)
+
+    img = ImageTk.PhotoImage(image)
+    lbl_img = tk.Label(new_window, image=img)
+    lbl_img.image = img
+    lbl_img.pack(pady=10)
+
     back_button = tk.Button(new_window, text="Volver", command=new_window.destroy, font=("Arial", 12), bg='#465ca9',
                             fg='#ffffff', padx=20, pady=5)
     back_button.pack(pady=0)
+
+
 #Indice a
 #Indice b
 def open_page_3_indx_b():
@@ -339,6 +351,14 @@ def open_page_3_indx_d():
     label = tk.Label(new_window, text=f"Resultados para nuestros casos 10000, 20000, 30000:"
                                       f"\n{menu_point_3.point_d()}", font=("Arial", 14), bg='#7587c6', fg='#ffffff')
     label.pack(pady=30)
+
+    image = Image.open("gif2.gif")
+    image = image.resize((500, 400), Image.LANCZOS)
+
+    img = ImageTk.PhotoImage(image)
+    lbl_img = tk.Label(new_window, image=img)
+    lbl_img.image = img
+    lbl_img.pack(pady=10)
 
     back_button = tk.Button(new_window, text="Volver", command=new_window.destroy, font=("Arial", 12), bg='#465ca9',
                             fg='#ffffff', padx=20, pady=5)
