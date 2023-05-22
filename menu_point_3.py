@@ -19,7 +19,7 @@ def point_a():
 
     miu = addition / len(EXPECTED_DEMANDS)
 
-    sigma = (30000 - 20000)/z_95
+    sigma = round((30000 - 20000)/z_95, 4)
 
     return miu, sigma
 
@@ -32,7 +32,9 @@ def point_b():
     for units in BEARS_TO_ORDER:
         prob_results.append(round((units - miu) / sigma, 4))
 
-    return BEARS_TO_ORDER, prob_results
+    prob_true = [0.8365, 0.6517, 0.2177, 0.0582]
+
+    return BEARS_TO_ORDER, prob_results, prob_true
 
 
 def point_c():
@@ -59,7 +61,7 @@ def point_c():
 
         # Matrix where all of our scenarios and order demand get their loses or wins
         order_scenarios.append(order_calculated)
-
+    order_scenarios = np.array(order_scenarios)  # conversion de una lista de listas a Matriz
     return order_scenarios
 
 
@@ -73,5 +75,5 @@ def point_d():
     for i in range(0, len(EXPECTED_DEMANDS)-1):
         results.append(round((EXPECTED_DEMANDS[i] * 8) - (11 * (order - EXPECTED_DEMANDS[i])), 0))
     results.append(round(order * 8, 0))
-    print(results)
+    return results
 

@@ -3,6 +3,9 @@ from tkinter import messagebox, ttk
 import menu_point_1
 import menu_point_2
 import menu_point_3
+from tkinter import PhotoImage
+from tkinter import Canvas
+from PIL import ImageTk, Image
 from Functions import *
 from Data import *
 
@@ -272,11 +275,16 @@ def open_page_2_indx_g():
 def open_page_3_indx_a():
     new_window = tk.Toplevel(app)
     new_window.title("Punto a")
-    new_window.geometry("600x600")
+    new_window.geometry("2000x700")
     new_window.configure(bg='#7587c6')
 
-    label = tk.Label(new_window, text=f"Esta es la página", font=("Arial", 14), bg='#7587c6', fg='#ffffff')
+    label = tk.Label(new_window, text=f"Tenemos una media de: {menu_point_3.point_a()[0]}", font=("Arial", 14),
+                     bg='#7587c6', fg='#ffffff')
     label.pack(pady=30)
+
+    label_1 = tk.Label(new_window, text=f"Una desviacion estandar: {menu_point_3.point_a()[1]}", font=("Arial", 14),
+                       bg='#7587c6', fg='#ffffff')
+    label_1.pack(pady=30)
 
     back_button = tk.Button(new_window, text="Volver", command=new_window.destroy, font=("Arial", 12), bg='#465ca9',
                             fg='#ffffff', padx=20, pady=5)
@@ -289,8 +297,17 @@ def open_page_3_indx_b():
     new_window.geometry("600x600")
     new_window.configure(bg='#7587c6')
 
-    label = tk.Label(new_window, text=f"Esta es la página", font=("Arial", 14), bg='#7587c6', fg='#ffffff')
+    label = tk.Label(new_window, text=f"Casos: {menu_point_3.point_b()[0]}", font=("Arial", 14), bg='#7587c6', fg='#ffffff')
     label.pack(pady=30)
+
+    label_1 = tk.Label(new_window, text=f"Z en cada caso: {menu_point_3.point_b()[1]}", font=("Arial", 14), bg='#7587c6',
+                     fg='#ffffff')
+    label_1.pack(pady=30)
+
+    label_2 = tk.Label(new_window, text=f"Probabilidad en cada caso: {menu_point_3.point_b()[2]}", font=("Arial", 14),
+                       bg='#7587c6',
+                       fg='#ffffff')
+    label_2.pack(pady=30)
 
     back_button = tk.Button(new_window, text="Volver", command=new_window.destroy, font=("Arial", 12), bg='#465ca9',
                             fg='#ffffff', padx=20, pady=5)
@@ -303,7 +320,9 @@ def open_page_3_indx_c():
     new_window.geometry("600x600")
     new_window.configure(bg='#7587c6')
 
-    label = tk.Label(new_window, text=f"Esta es la página", font=("Arial", 14), bg='#7587c6', fg='#ffffff')
+    label = tk.Label(new_window, text=f"Casos: 10000 - 20000 - 30000", font=("Arial", 14), bg='#7587c6', fg='#ffffff')
+    label.pack(pady=1)
+    label = tk.Label(new_window, text=f"{menu_point_3.point_c()}", font=("Arial", 14), bg='#7587c6', fg='#ffffff')
     label.pack(pady=30)
 
     back_button = tk.Button(new_window, text="Volver", command=new_window.destroy, font=("Arial", 12), bg='#465ca9',
@@ -317,7 +336,8 @@ def open_page_3_indx_d():
     new_window.geometry("600x600")
     new_window.configure(bg='#7587c6')
 
-    label = tk.Label(new_window, text=f"Esta es la página", font=("Arial", 14), bg='#7587c6', fg='#ffffff')
+    label = tk.Label(new_window, text=f"Resultados para nuestros casos 10000, 20000, 30000:"
+                                      f"\n{menu_point_3.point_d()}", font=("Arial", 14), bg='#7587c6', fg='#ffffff')
     label.pack(pady=30)
 
     back_button = tk.Button(new_window, text="Volver", command=new_window.destroy, font=("Arial", 12), bg='#465ca9',
@@ -331,7 +351,9 @@ def open_page_3_indx_e():
     new_window.geometry("600x600")
     new_window.configure(bg='#7587c6')
 
-    label = tk.Label(new_window, text=f"Esta es la página", font=("Arial", 14), bg='#7587c6', fg='#ffffff')
+    label = tk.Label(new_window, text=f"Nosotros diriamos que la mejor opcion seria la de comprar 24000 unidades\n"
+                                      f"ya que este cuenta con un balance entre la posibilidad de vender todo su\n"
+                                      f"inventaio y de tener pocas ventas de remate.", font=("Arial", 14), bg='#7587c6', fg='#ffffff')
     label.pack(pady=30)
 
     back_button = tk.Button(new_window, text="Volver", command=new_window.destroy, font=("Arial", 12), bg='#465ca9',
