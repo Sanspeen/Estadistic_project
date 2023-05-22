@@ -388,7 +388,7 @@ def open_page_4_indx_4():
     new_window.geometry("1000x600")
     new_window.configure(bg='#7587c6')
 
-    label = tk.Label(new_window, text=f"Link para ir a la IA:\n https://colab.research.google.com/drive/14Ysfxzw0tE2xZqvCkK2qebIViTKVCgM6?authuser=2#scrollTo=QuW8GFCDCfOS", font=("Arial", 14), bg='#7587c6', fg='#ffffff')
+    label = tk.Label(new_window, text=f"Link para ir a la IA:\nhttps://colab.research.google.com/drive/14Ysfxzw0tE2xZqvCkK2qebIViTKVCgM6?usp=sharing", font=("Arial", 14), bg='#7587c6', fg='#ffffff')
     label.pack(pady=30)
 
     back_button = tk.Button(new_window, text="Volver", command=new_window.destroy, font=("Arial", 12), bg='#465ca9',
